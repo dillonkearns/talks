@@ -202,3 +202,9 @@ Loading
 * Introduce flexibility as needed
 
 ![left](2.jpg)
+
+---
+
+# Misleading Error
+
+![fit original](misleading-cli-error-message.png)
