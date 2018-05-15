@@ -201,4 +201,4 @@ Loading
 * Start opinionated, minimal
 * Introduce flexibility as needed
 
-![left ](2.jpg)
+![left](2.jpg)
