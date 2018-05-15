@@ -26,7 +26,7 @@ build-lists: true
 
 ---
 
-# Elm ![](https://upload.wikimedia.org/wikipedia/commons/f/f3/Elm_logo.svg)
+# **Elm** ![](https://upload.wikimedia.org/wikipedia/commons/f/f3/Elm_logo.svg)
 
 * Language for client-side web apps
 * Compiles to JavaScript
