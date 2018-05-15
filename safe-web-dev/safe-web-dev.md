@@ -1,4 +1,4 @@
-footer: [github.com/**DillonKearns**](http://github.com/dillonkearns) @dillontkearns
+footer: [github.com/**DillonKearns**/talks](http://github.com/dillonkearns/talks) @dillontkearns
 build-lists: true
 
 # Developing For The Web With Extreme Safety
@@ -54,12 +54,11 @@ build-lists: true
 # 1) **Domain Modeling**
 
 ```elm, [.highlight: 1]
-contracts
-impossibleStates
+contracts -- decoders
+impossibleStates -- union types
 ```
 
-Decoders
-
+* Without contracts, the errors creep deep into the system, making it harder to trace.
 * Untyped => Typed
 * If there's an error, no exception... it's just part of the data
 * Annoyance at first, can't live without it once you get used to it
