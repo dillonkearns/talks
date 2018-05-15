@@ -11,7 +11,8 @@ build-lists: true
 
 ---
 
-![fit](modern-agile.jpg)
+![left 90%](elm.png)
+![right 50%](modern-agile.jpg)
 
 ---
 
