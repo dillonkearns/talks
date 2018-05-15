@@ -84,6 +84,26 @@ String.toInt "3.1" == Err "could not convert string '3.1' to an Int"
 
 ---
 
+# Dealing With Uncertainty
+
+```elm
+result = String.toInt someStringFromUserInput
+
+case result of
+  Ok intValue ->
+    intValue
+  Err errorMessage ->
+    -1
+```
+
+### Can also be written as
+
+```elm
+Result.withDefault -1 result
+```
+
+---
+
 # 1) **Traceability**
 
 ```elm, [.highlight: 2]
