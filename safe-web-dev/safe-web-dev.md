@@ -228,3 +228,43 @@ Loading
 # Misleading Error
 
 ![fit original](misleading-cli-error-message.png)
+
+---
+
+```javascript, [.highlight: 17]
+var args = minimist(process.argv.slice(2), {
+  alias: {
+    help: "h",
+    fuzz: "f",
+    seed: "s",
+    compiler: "c",
+    "add-dependencies": "a",
+    report: "r",
+    watch: "w"
+  },
+  boolean: ["warn", "version", "help", "watch"],
+  string: ["add-dependencies", "compiler", "seed", "report", "fuzz"]
+});
+function runElmTest() {
+  checkNodeVersion();
+
+  if (args._[0] == "init") {
+    var cmdArgs = Init.init();
+    var cmd = [pathToElmPackage, "install", "--yes"].concat(cmdArgs).join(" ");
+
+    child_process.execSync(cmd, { stdio: "inherit", cwd: Init.elmPackageDir });
+
+    process.exit(0);
+  }
+```
+
+[Github source](https://github.com/rtfeldman/node-test-runner/blob/4f9147f687e5636e0c2fd0b661ab5262c9e90faf/lib/elm-test.js#L287)
+
+---
+
+# **Enforce Contracts at the Gate**
+
+## Imperative vs. Declarative
+
+Instead of checking if certain things are present and letting uncertainty slip through,
+catch contract violations at the gate and don't let them through.
