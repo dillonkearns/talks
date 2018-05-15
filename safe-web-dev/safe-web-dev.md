@@ -266,5 +266,59 @@ function runElmTest() {
 
 ## Imperative vs. Declarative
 
+---
+
+# **Contracts & GraphQL**
+
+```elm
+{
+  human(id: "1000") {
+    name
+    height
+  }
+}
+```
+
+---
+
+# **Minimize Constructs**
+
+### Aliases & Fragments
+
+```elm
+{
+  leftComparison: hero(episode: EMPIRE) {
+    ...comparisonFields
+  }
+  rightComparison: hero(episode: JEDI) {
+    ...comparisonFields
+  }
+}
+
+fragment comparisonFields on Character {
+  name
+  appearsIn
+  friends {
+    name
+  }
+}
+```
+
+---
+
+# **Minimize Constructs**
+
+## Variables
+
+```elm
+query HeroName($episode: Episode) {
+  hero(episode: $episode) {
+    name
+  }
+}
+```
+
+---
+
 Instead of checking if certain things are present and letting uncertainty slip through,
 catch contract violations at the gate and don't let them through.
