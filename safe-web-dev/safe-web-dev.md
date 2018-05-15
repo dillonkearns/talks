@@ -17,8 +17,8 @@ build-lists: true
 
 # **Safety Tips**
 
-1. Domain Modeling
 1. Traceability
+1. Domain Modeling
 1. Consumer-Driven APIs
 
 ![](climbing-gear.jpg)
@@ -40,7 +40,48 @@ build-lists: true
 
 ---
 
-# 1) **Domain Modeling**
+# 1) **Traceability**
+
+* Errors as data
+* Managed effects
+
+![right ](13.jpg)
+
+---
+
+# 1) **Traceability**
+
+```elm, [.highlight: 1]
+errorsAsData
+managedEffects
+```
+
+### How do you deal with uncertainty?
+
+* Errors as data
+* No null, Maybe union instead
+* Errors are traceable
+
+---
+
+# 1) **Traceability**
+
+```elm, [.highlight: 2]
+errorsAsData
+managedEffects
+```
+
+* Funnel all side-effects to one place
+* Single place where non-determinism/side effects stem from
+* Single place where the results of non-determinism/side-effects funnels into
+
+---
+
+![fit](elm-architecture.jpeg)
+
+---
+
+# 2) **Domain Modeling**
 
 * [Make Impossible States Impossible](https://www.youtube.com/watch?v=IcgmSRJHu_8)
 * Contract-Driven Design
@@ -51,7 +92,7 @@ build-lists: true
 
 ---
 
-# 1) **Domain Modeling**
+# 2) **Domain Modeling**
 
 ```elm, [.highlight: 1]
 contracts -- decoders
@@ -66,6 +107,8 @@ impossibleStates -- union types
 
 ---
 
+# **Errors as Data**
+
 ### The `Result` type
 
 ```elm
@@ -74,7 +117,16 @@ type Result data error
   | Err error
 ```
 
-### Decoding JSON
+#### Examples
+
+```elm
+String.toInt "-42" == Ok -42
+String.toInt "3.1" == Err "could not convert string '3.1' to an Int"
+```
+
+---
+
+# **Decoding JSON**
 
 ```elm
   json = """{ "first": "Beverly", "last": "Crusher" }"""
@@ -138,46 +190,6 @@ Loading
 
 ---
 
-# 2) **Traceability**
-
-## Managed effects
-
-* Funnel all side-effects to one place
-* Managed Effects
-  * Single place where non-determinism/side effects stem from
-  * Single place where the results of non-determinism/side-effects funnels into
-
-![right ](13.jpg)
-
----
-
-# 2) **Traceability**
-
-## Dealing with uncertainty
-
-* Errors are data
-* No null, Maybe union instead
-* Errors are traceable
-
-![right ](13.jpg)
-
----
-
-# 2) **Traceability**
-
-```elm, [.highlight: 1]
-dealingWithUncertainty
-managedEffects
-```
-
-* Errors are data
-* No null, Maybe union instead
-* Errors are traceable
-
-![right ](13.jpg)
-
----
-
 # 3) **Consumer-Driven APIs**
 
 ### What does UX for APIs have to do with safety?
@@ -189,7 +201,3 @@ managedEffects
 * Introduce flexibility as needed
 
 ![left ](2.jpg)
-
----
-
-![fit](elm-architecture.jpeg)
