@@ -58,9 +58,10 @@ contracts -- decoders
 impossibleStates -- union types
 ```
 
-* Without contracts, the errors creep deep into the system, making it harder to trace.
+* Without contracts, errors creep deep into the system
+  => harder to trace
 * Untyped => Typed
-* If there's an error, no exception... it's just part of the data
+* No exceptions, errors are just data
 * Annoyance at first, can't live without it once you get used to it
 
 ---
