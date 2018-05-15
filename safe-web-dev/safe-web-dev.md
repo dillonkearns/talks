@@ -65,6 +65,25 @@ managedEffects
 
 ---
 
+# **Errors as Data**
+
+### The `Result` type
+
+```elm
+type Result data error
+  = Ok data
+  | Err error
+```
+
+#### Examples
+
+```elm
+String.toInt "-42" == Ok -42
+String.toInt "3.1" == Err "could not convert string '3.1' to an Int"
+```
+
+---
+
 # 1) **Traceability**
 
 ```elm, [.highlight: 2]
@@ -105,25 +124,6 @@ impossibleStates -- union types
 * Untyped => Typed
 * No exceptions, errors are just data
 * Annoyance at first, can't live without it once you get used to it
-
----
-
-# **Errors as Data**
-
-### The `Result` type
-
-```elm
-type Result data error
-  = Ok data
-  | Err error
-```
-
-#### Examples
-
-```elm
-String.toInt "-42" == Ok -42
-String.toInt "3.1" == Err "could not convert string '3.1' to an Int"
-```
 
 ---
 
