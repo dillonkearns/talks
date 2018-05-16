@@ -87,16 +87,19 @@ String.toInt "3.1" == Err "could not convert string '3.1' to an Int"
 # Dealing With Uncertainty
 
 ```elm
-result = String.toInt someStringFromUserInput
-
-case result of
-  Ok intValue ->
-    intValue
-  Err errorMessage ->
-    -1
+parseIntOrNegativeOne intString =
+  let
+    toIntResult =
+      String.toInt intString
+  in
+  case toIntResult of
+    Ok intValue ->
+      intValue
+    Err errorMessage ->
+      -1
 ```
 
-### Can also be written as
+### `case` can also be written as
 
 ```elm
 Result.withDefault -1 result
@@ -281,7 +284,10 @@ function runElmTest() {
 
 ---
 
-# **Minimize Constructs**
+```elm, [.highlight: 1]
+minimizeConstructs -- Graphqelm Constructs
+otherThing
+```
 
 ### Aliases & Fragments
 
