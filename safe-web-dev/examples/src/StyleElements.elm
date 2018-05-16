@@ -23,6 +23,10 @@ main =
             ]
         ]
     <|
-        el
-            [ width (px 200), height (px 200) ]
-            (text "Hello stylish friend!")
+        Element.row [] []
+
+
+
+-- el
+--     [ width (px 200), height (px 200) ]
+--     (text "Hello stylish friend!")

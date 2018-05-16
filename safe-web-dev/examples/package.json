@@ -1,0 +1,16 @@
+{
+  "name": "examples",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "elm-live": "^2.7.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "elm-live src/StyleElements.elm --open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
