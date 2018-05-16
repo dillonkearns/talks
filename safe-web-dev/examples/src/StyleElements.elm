@@ -4,6 +4,7 @@ import Color exposing (..)
 import Element exposing (..)
 import Element.Background as Background
 import Element.Font as Font
+import Element.Input
 import Html exposing (Html)
 
 
@@ -24,13 +25,21 @@ main =
         ]
     <|
         Element.column []
-            [ Element.el
+            [ Element.row
                 [ height (px 100)
                 , width fill
                 , Background.color darkCharcoal
+                , Element.spaceEvenly
                 ]
-                (Element.text "Style Elements Demo")
+                [ Element.text "Style Elements Demo"
+                , searchBar
+                ]
             ]
+
+
+searchBar : Element msg
+searchBar =
+    Element.Input.text [ Element.width (px 500) ] { onChange = Nothing, text = "", placeholder = Nothing, label = Element.Input.labelLeft [] (Element.text "Search") }
 
 
 
