@@ -1,4 +1,4 @@
-module StyleElements exposing (..)
+module StyleElements exposing (main)
 
 import Color exposing (..)
 import Element exposing (..)
@@ -23,7 +23,14 @@ main =
             ]
         ]
     <|
-        Element.row [] []
+        Element.column []
+            [ Element.el
+                [ height (px 100)
+                , width fill
+                , Background.color darkCharcoal
+                ]
+                (Element.text "Style Elements Demo")
+            ]
 
 
 
