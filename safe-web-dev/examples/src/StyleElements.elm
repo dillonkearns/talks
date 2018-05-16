@@ -13,8 +13,7 @@ main =
     Element.layout
         [ Background.color blue
         , Font.color white
-        , Font.italic
-        , Font.size 32
+        , Font.size 22
         , Font.family
             [ Font.external
                 { url = "https://fonts.googleapis.com/css?family=EB+Garamond"
@@ -30,11 +29,26 @@ main =
                 , width fill
                 , Background.color darkCharcoal
                 , Element.spaceEvenly
+                , padding 20
                 ]
-                [ Element.text "Style Elements Demo"
+                [ Element.text "Style Elements Demo" |> Element.el [ Font.size 30 ]
                 , searchBar
+                , links
+                , avatar
                 ]
             ]
+
+
+links : Element msg
+links =
+    Element.row [ width (px 100) ]
+        [ Element.link [] { url = "asdf", label = Element.text "Pull Requests" }
+        ]
+
+
+avatar : Element msg
+avatar =
+    Element.text "avatar"
 
 
 searchBar : Element msg
