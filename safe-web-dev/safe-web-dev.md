@@ -59,10 +59,27 @@ uncertaintyAsData -- How do you deal with uncertainty?
 managedEffects
 ```
 
-* Can't raise exceptions
-* No global exception handlers squelching errors
-* No propagating hard-to-debug nulls from exception handlers
 * No null, Maybe union instead
+
+---
+
+# **Uncertainty as Data**
+
+### The `Maybe` type
+
+```elm
+type Maybe value
+  = Just value
+  | Nothing
+```
+
+#### Examples
+
+```elm
+List.head [100, 200, 300] == Just 100
+
+List.head [] == Nothing
+```
 
 ---
 
@@ -73,6 +90,9 @@ uncertaintyAsData -- How do you deal with uncertainty?
 managedEffects
 ```
 
+* Can't raise exceptions
+* No global exception handlers squelching errors
+* No propagating hard-to-debug nulls from exception handlers
 * Errors are traceable
 * Exceptions are like `GOTO`s
 * ...Except the destination line is determined by outside context
@@ -118,26 +138,6 @@ parseIntOrNegativeOne intString =
 
 ```elm
 Result.withDefault -1 result
-```
-
----
-
-# **Uncertainty as Data**
-
-### The `Maybe` type
-
-```elm
-type Maybe value
-  = Just value
-  | Nothing
-```
-
-#### Examples
-
-```elm
-List.head [100, 200, 300] == Just 100
-
-List.head [] == Nothing
 ```
 
 ---
