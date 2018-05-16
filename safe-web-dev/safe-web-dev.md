@@ -3,7 +3,9 @@ build-lists: true
 
 # Developing For The Web With Extreme Safety
 
-<!-- ## **Dillon Kearns** -->
+^ Elm has language features that support safety
+Also has ethos that promotes safety
+Lots of innovation inspired by features & ethos
 
 ## [github.com/**DillonKearns**](http://github.com/dillonkearns)
 
@@ -43,7 +45,7 @@ build-lists: true
 
 # 1) **Traceability**
 
-* Errors as data
+* Uncertainty as data
 * Managed effects
 
 ![right ](13.jpg)
@@ -53,19 +55,32 @@ build-lists: true
 # 1) **Traceability**
 
 ```elm, [.highlight: 1]
-errorsAsData
+uncertaintyAsData -- How do you deal with uncertainty?
 managedEffects
 ```
 
-### How do you deal with uncertainty?
-
-* Errors as data
+* Can't raise exceptions
+* No global exception handlers squelching errors
+* No propagating hard-to-debug nulls from exception handlers
 * No null, Maybe union instead
-* Errors are traceable
 
 ---
 
-# **Errors as Data**
+# 1) **Traceability**
+
+```elm, [.highlight: 1]
+uncertaintyAsData -- How do you deal with uncertainty?
+managedEffects
+```
+
+* Errors are traceable
+* Exceptions are like `GOTO`s
+* ...Except the destination line is determined by outside context
+* `goto ???`
+
+---
+
+# **Uncertainty as Data**
 
 ### The `Result` type
 
@@ -107,10 +122,30 @@ Result.withDefault -1 result
 
 ---
 
+# **Uncertainty as Data**
+
+### The `Maybe` type
+
+```elm
+type Maybe value
+  = Just value
+  | Nothing
+```
+
+#### Examples
+
+```elm
+List.head [100, 200, 300] == Just 100
+
+List.head [] == Nothing
+```
+
+---
+
 # 1) **Traceability**
 
 ```elm, [.highlight: 2]
-errorsAsData
+uncertaintyAsData
 managedEffects
 ```
 
