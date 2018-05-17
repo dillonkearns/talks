@@ -282,6 +282,20 @@ Loading
 
 ---
 
+# **Graphqelm**
+
+* Generate Elm code based on your GraphQL schema
+
+* If it compiles, it's valid
+* Types are known at compile-time
+
+![original](6.jpg)
+
+^ As long as you never make backwards-incompatible API changes in your GraphQL server (this is considered the best practice by many companies including Facebook), your Graphqelm queries will be valid even if it gets out of date. But you could always put a script in your CI pipeline to regenerate the code and check if it still compiles, fail if it doesn’t… this will guarantee that you never have any backwards incompatible changes that get to production.
+The types of the returned data you get back are known at runtime, including whether something might be null or not.
+
+---
+
 # Misleading Error
 
 ![fit original](misleading-cli-error-message.png)
