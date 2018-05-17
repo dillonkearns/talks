@@ -363,3 +363,23 @@ query HeroName($episode: Episode) {
 
 Instead of checking if certain things are present and letting uncertainty slip through,
 catch contract violations at the gate and don't let them through.
+
+---
+
+(1) **Traceability**
+
+* Uncertainty as data
+* Managed effects
+
+(2) **Domain Modeling**
+
+* [Make Impossible States Impossible](https://www.youtube.com/watch?v=IcgmSRJHu_8)
+* Contract-Driven Design
+
+(3) **Consumer-Driven APIs**
+
+* Guide towards correct use
+* Minimal interface
+* Opinionated, minimal
+
+![left ](2.jpg)
