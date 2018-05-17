@@ -282,8 +282,9 @@ Loading
 
 # **Style Elements Package**
 
-* Fully specify your layouts inline (no cascading, no indirection like rules applying to h1, children of table, etc.)
-  No separate DSL for classes, ids, stylesheets... they're just code, you can abstract them using the language features! Fully traceable and explicit, unlike CSS which is implicit…
+* Fully specify your layouts inline
+* No cascading, no indirection
+* Plain code, no separate DSL for classes, ids, stylesheets
 
 * If there is a layout problem, you know exactly where to look
 
@@ -300,7 +301,7 @@ Loading
 * If it compiles, it's valid
 * Types are known at compile-time
 
-![original](6.jpg)
+![](6.jpg)
 
 ^ As long as you never make backwards-incompatible API changes in your GraphQL server (this is considered the best practice by many companies including Facebook), your Graphqelm queries will be valid even if it gets out of date. But you could always put a script in your CI pipeline to regenerate the code and check if it still compiles, fail if it doesn’t… this will guarantee that you never have any backwards incompatible changes that get to production.
 The types of the returned data you get back are known at runtime, including whether something might be null or not.
