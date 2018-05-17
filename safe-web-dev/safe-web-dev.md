@@ -333,6 +333,18 @@ function runElmTest() {
 
 ---
 
+# **elm-cli**
+
+Access an option that never exists, or doesn’t exist in some permutations, no problem, it will just be null… hard to give helpful error messages that way. Error messages with the imperative style tend to be less informative about when unexpected/unconsumed options are present.
+Use JS options to demo
+
+Imperative rather than declarative… imperative tends to be more lazy, only checks when it needs to, so it tends to be sloppier about notifying the user when it is ignoring an option.
+Link to Style Elements Elm Europe talk
+Start with how a human would think about it and work backwards. Even if the thing is already existing.
+Use minimal concepts/constructs.
+
+---
+
 # **Enforce Contracts at the Gate**
 
 ## Imperative vs. Declarative
@@ -427,7 +439,7 @@ catch contract violations at the gate and don't let them through.
 
 ---
 
-# Thank You!
+# **Thank You!**
 
 ## Questions?
 

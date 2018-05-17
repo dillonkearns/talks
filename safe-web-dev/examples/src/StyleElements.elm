@@ -22,7 +22,7 @@ main =
             ]
         ]
     <|
-        greeting
+        navbar
 
 
 greeting : Element msg
@@ -31,42 +31,29 @@ greeting =
         |> Element.el [ Element.centerX, Element.alignTop, Element.padding 20, Font.size 80 ]
 
 
-navbar : Html msg
+navbar : Element msg
 navbar =
-    Element.layout
-        [ Background.color blue
-        , Font.color white
-        , Font.size 22
-        , Font.family
-            [ Font.external
-                { url = "https://fonts.googleapis.com/css?family=EB+Garamond"
-                , name = "EB Garamond"
-                }
-            , Font.sansSerif
+    Element.column []
+        [ Element.row
+            [ height (px 100)
+            , width fill
+            , Background.color darkCharcoal
+            , Element.spaceEvenly
+            , padding 20
+            ]
+            [ Element.row
+                [ Element.spacing 10
+                , Element.padding 10
+                , Element.width Element.shrink
+                , Element.mouseOver [ Background.color Color.black ]
+                ]
+                [ Element.text "Style Elements Demo" |> Element.el [ Font.size 30 ]
+                , elmLogo
+                ]
+            , links
+            , avatar
             ]
         ]
-    <|
-        Element.column []
-            [ Element.row
-                [ height (px 100)
-                , width fill
-                , Background.color darkCharcoal
-                , Element.spaceEvenly
-                , padding 20
-                ]
-                [ Element.row
-                    [ Element.spacing 10
-                    , Element.padding 10
-                    , Element.width Element.shrink
-                    , Element.mouseOver [ Background.color Color.black ]
-                    ]
-                    [ Element.text "Style Elements Demo" |> Element.el [ Font.size 30 ]
-                    , elmLogo
-                    ]
-                , links
-                , avatar
-                ]
-            ]
 
 
 links : Element msg
