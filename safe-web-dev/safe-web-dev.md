@@ -278,6 +278,8 @@ Loading
 
 ^ If you add, change, delete, refactor something about layout, it won’t modify the layout of any other thing unless that thing specifically points to an abstraction that you are changing (a constant or a function). Contrast this with CSS: perhaps another CSS file is being added that you’re not aware of and you’re overriding one of its rules when you do `table td a { color: chartreuse }`
 
+![](5.jpg)
+
 ---
 
 # Misleading Error
