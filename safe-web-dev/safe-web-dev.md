@@ -294,6 +294,12 @@ Loading
 
 ---
 
+# Misleading Error
+
+![fit original](misleading-cli-error-message.png)
+
+---
+
 ```javascript, [.highlight: 17]
 var args = minimist(process.argv.slice(2), {
   alias: {
@@ -322,12 +328,6 @@ function runElmTest() {
 ```
 
 [Github source](https://github.com/rtfeldman/node-test-runner/blob/4f9147f687e5636e0c2fd0b661ab5262c9e90faf/lib/elm-test.js#L287)
-
----
-
-# Misleading Error
-
-![fit original](misleading-cli-error-message.png)
 
 ---
 

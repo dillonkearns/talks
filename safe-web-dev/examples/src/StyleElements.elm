@@ -38,7 +38,11 @@ view model =
             ]
         ]
     <|
-        navbar model
+        greeting
+
+
+
+-- navbar model
 
 
 greeting : Element Msg
