@@ -269,6 +269,17 @@ Loading
 
 ---
 
+# **Style Elements Package**
+
+* Fully specify your layouts inline (no cascading, no indirection like rules applying to h1, children of table, etc.)
+  No separate DSL for classes, ids, stylesheets... they're just code, you can abstract them using the language features! Fully traceable and explicit, unlike CSS which is implicit…
+
+* If there is a layout problem, you know exactly where to look
+
+^ If you add, change, delete, refactor something about layout, it won’t modify the layout of any other thing unless that thing specifically points to an abstraction that you are changing (a constant or a function). Contrast this with CSS: perhaps another CSS file is being added that you’re not aware of and you’re overriding one of its rules when you do `table td a { color: chartreuse }`
+
+---
+
 # Misleading Error
 
 ![fit original](misleading-cli-error-message.png)
