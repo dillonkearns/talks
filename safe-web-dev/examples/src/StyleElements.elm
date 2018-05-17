@@ -63,12 +63,20 @@ navbar model =
                 , Element.width Element.shrink
                 , Element.mouseOver [ Background.color Color.black ]
                 ]
-                [ Element.text "Style Elements Demo" |> Element.el [ Font.size 30 ]
-                , elmLogo
-                ]
+                (logoPanel model)
             , links
             , avatar
             ]
+        ]
+
+
+logoPanel : Model -> List (Element Msg)
+logoPanel model =
+    if model.width < 600 then
+        [ elmLogo ]
+    else
+        [ Element.text "Style Elements Demo" |> Element.el [ Font.size 30 ]
+        , elmLogo
         ]
 
 
@@ -105,7 +113,9 @@ type alias Model =
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
-    ( model, Cmd.none )
+    case msg of
+        WindowSize sizeWindow ->
+            ( sizeWindow, Cmd.none )
 
 
 subscriptions : Model -> Sub Msg
