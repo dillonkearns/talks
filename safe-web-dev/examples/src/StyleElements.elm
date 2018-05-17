@@ -5,10 +5,26 @@ import Element exposing (..)
 import Element.Background as Background
 import Element.Font as Font
 import Html exposing (Html)
+import Task
+import Window
 
 
-main : Html msg
+type Msg
+    = WindowSize Window.Size
+
+
+main : Program Never Model Msg
 main =
+    Html.program
+        { init = ( { height = 0, width = 0 }, Window.size |> Task.perform WindowSize )
+        , update = update
+        , subscriptions = subscriptions
+        , view = view
+        }
+
+
+view : Model -> Html Msg
+view model =
     Element.layout
         [ Background.color blue
         , Font.color white
@@ -22,17 +38,17 @@ main =
             ]
         ]
     <|
-        navbar
+        navbar model
 
 
-greeting : Element msg
+greeting : Element Msg
 greeting =
     Element.text "Hello Agile and Beyond!"
         |> Element.el [ Element.centerX, Element.alignTop, Element.padding 20, Font.size 80 ]
 
 
-navbar : Element msg
-navbar =
+navbar : Model -> Element Msg
+navbar model =
     Element.column []
         [ Element.row
             [ height (px 100)
@@ -56,7 +72,7 @@ navbar =
         ]
 
 
-links : Element msg
+links : Element Msg
 links =
     Element.row [ width shrink, Element.spacing 10 ]
         [ Element.link [] { url = "", label = Element.text "About" }
@@ -65,14 +81,14 @@ links =
         ]
 
 
-avatar : Element msg
+avatar : Element Msg
 avatar =
     Element.image
         [ width (px 50) ]
         { src = "/avatar.jpeg", description = "avatar" }
 
 
-elmLogo : Element msg
+elmLogo : Element Msg
 elmLogo =
     -- Element.Input.text [ Element.width (px 500), Font.color darkCharcoal ]
     --     { onChange = Nothing
@@ -81,3 +97,17 @@ elmLogo =
     --     , label = Element.Input.labelLeft [] Element.none
     --     }
     Element.image [ width (px 50) ] { src = "/elm.png", description = "elm logo" }
+
+
+type alias Model =
+    Window.Size
+
+
+update : Msg -> Model -> ( Model, Cmd Msg )
+update msg model =
+    ( model, Cmd.none )
+
+
+subscriptions : Model -> Sub Msg
+subscriptions model =
+    Window.resizes WindowSize
