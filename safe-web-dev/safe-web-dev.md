@@ -285,8 +285,8 @@ Loading
 * Fully specify your layouts inline
 * No cascading, no indirection
 * Plain code, no separate DSL for classes, ids, stylesheets
-
 * If there is a layout problem, you know exactly where to look
+* Helps enforce accessibility
 
 ^ If you add, change, delete, refactor something about layout, it won’t modify the layout of any other thing unless that thing specifically points to an abstraction that you are changing (a constant or a function). Contrast this with CSS: perhaps another CSS file is being added that you’re not aware of and you’re overriding one of its rules when you do `table td a { color: chartreuse }`
 
