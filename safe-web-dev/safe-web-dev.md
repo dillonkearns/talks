@@ -358,6 +358,20 @@ catch contract violations at the gate and don't let them through.
 
 # **Minimize Constructs**
 
+## Variables
+
+```elm
+query HeroName($episode: Episode) {
+  hero(episode: $episode) {
+    name
+  }
+}
+```
+
+---
+
+# **Minimize Constructs**
+
 ### Aliases & Fragments
 
 ```elm
@@ -374,20 +388,6 @@ fragment comparisonFields on Character {
   name
   appearsIn
   friends {
-    name
-  }
-}
-```
-
----
-
-# **Minimize Constructs**
-
-## Variables
-
-```elm
-query HeroName($episode: Episode) {
-  hero(episode: $episode) {
     name
   }
 }
