@@ -4,7 +4,6 @@ import Color exposing (..)
 import Element exposing (..)
 import Element.Background as Background
 import Element.Font as Font
-import Element.Input
 import Html exposing (Html)
 
 
@@ -31,8 +30,15 @@ main =
                 , Element.spaceEvenly
                 , padding 20
                 ]
-                [ Element.text "Style Elements Demo" |> Element.el [ Font.size 30 ]
-                , searchBar
+                [ Element.row
+                    [ Element.spacing 10
+                    , Element.padding 10
+                    , Element.width Element.shrink
+                    , Element.mouseOver [ Background.color Color.black ]
+                    ]
+                    [ Element.text "Style Elements Demo" |> Element.el [ Font.size 30 ]
+                    , elmLogo
+                    ]
                 , links
                 , avatar
                 ]
@@ -51,9 +57,15 @@ avatar =
     Element.text "avatar"
 
 
-searchBar : Element msg
-searchBar =
-    Element.Input.text [ Element.width (px 500) ] { onChange = Nothing, text = "", placeholder = Nothing, label = Element.Input.labelLeft [] (Element.text "Search") }
+elmLogo : Element msg
+elmLogo =
+    -- Element.Input.text [ Element.width (px 500), Font.color darkCharcoal ]
+    --     { onChange = Nothing
+    --     , text = ""
+    --     , placeholder = Just <| Element.Input.placeholder [ Font.color darkCharcoal ] (Element.text "")
+    --     , label = Element.Input.labelLeft [] Element.none
+    --     }
+    Element.image [ width (px 50) ] { src = "/elm.png", description = "elm logo" }
 
 
 

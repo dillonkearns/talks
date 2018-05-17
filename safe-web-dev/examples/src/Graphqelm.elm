@@ -45,7 +45,8 @@ heroName =
 makeRequest : Cmd Msg
 makeRequest =
     query
-        |> Graphqelm.Http.queryRequest "https://graphqelm.herokuapp.com"
+        -- |> Graphqelm.Http.queryRequest "https://graphqelm.herokuapp.com"
+        |> Graphqelm.Http.queryRequest "http://0.0.0.0:4000"
         |> Graphqelm.Http.send (RemoteData.fromResult >> GotResponse)
 
 

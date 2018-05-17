@@ -8,7 +8,9 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "elm-live src/StyleElements.elm --open"
+    "start": "elm-live src/StyleElements.elm --open",
+    "style": "elm-live src/StyleElements.elm --open",
+    "graphqelm": "elm-live src/Graphqelm.elm --open"
   },
   "keywords": [],
   "author": "",
