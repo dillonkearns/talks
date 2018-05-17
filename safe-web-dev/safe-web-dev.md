@@ -399,6 +399,14 @@ catch contract violations at the gate and don't let them through.
 
 ---
 
+# **Takeaways**
+
+* Work backwards from constraints
+* Guarantees are better than discipline
+* Fewer features means more safety
+
+---
+
 (1) **Traceability**
 
 * Uncertainty as data
@@ -416,3 +424,11 @@ catch contract violations at the gate and don't let them through.
 * Opinionated, minimal
 
 ![left ](12.jpg)
+
+---
+
+# Thank You!
+
+## Questions?
+
+![](climbing.jpg)
