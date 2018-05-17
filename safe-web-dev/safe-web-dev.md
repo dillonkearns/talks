@@ -294,26 +294,6 @@ Loading
 
 ---
 
-# **Graphqelm**
-
-* Generate Elm code based on your GraphQL schema
-
-* If it compiles, it's valid
-* Types are known at compile-time
-
-![](6.jpg)
-
-^ As long as you never make backwards-incompatible API changes in your GraphQL server (this is considered the best practice by many companies including Facebook), your Graphqelm queries will be valid even if it gets out of date. But you could always put a script in your CI pipeline to regenerate the code and check if it still compiles, fail if it doesn’t… this will guarantee that you never have any backwards incompatible changes that get to production.
-The types of the returned data you get back are known at runtime, including whether something might be null or not.
-
----
-
-# Misleading Error
-
-![fit original](misleading-cli-error-message.png)
-
----
-
 ```javascript, [.highlight: 17]
 var args = minimist(process.argv.slice(2), {
   alias: {
@@ -342,6 +322,12 @@ function runElmTest() {
 ```
 
 [Github source](https://github.com/rtfeldman/node-test-runner/blob/4f9147f687e5636e0c2fd0b661ab5262c9e90faf/lib/elm-test.js#L287)
+
+---
+
+# Misleading Error
+
+![fit original](misleading-cli-error-message.png)
 
 ---
 
@@ -406,6 +392,20 @@ query HeroName($episode: Episode) {
   }
 }
 ```
+
+---
+
+# **Graphqelm**
+
+* Generate Elm code based on your GraphQL schema
+
+* If it compiles, it's valid
+* Types are known at compile-time
+
+![](6.jpg)
+
+^ As long as you never make backwards-incompatible API changes in your GraphQL server (this is considered the best practice by many companies including Facebook), your Graphqelm queries will be valid even if it gets out of date. But you could always put a script in your CI pipeline to regenerate the code and check if it still compiles, fail if it doesn’t… this will guarantee that you never have any backwards incompatible changes that get to production.
+The types of the returned data you get back are known at runtime, including whether something might be null or not.
 
 ---
 
