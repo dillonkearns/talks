@@ -47,14 +47,18 @@ main =
 
 links : Element msg
 links =
-    Element.row [ width (px 100) ]
-        [ Element.link [] { url = "asdf", label = Element.text "Pull Requests" }
+    Element.row [ width shrink, Element.spacing 10 ]
+        [ Element.link [] { url = "", label = Element.text "About" }
+        , Element.link [] { url = "", label = Element.text "Contact" }
+        , Element.link [] { url = "", label = Element.text "Testimonials" }
         ]
 
 
 avatar : Element msg
 avatar =
-    Element.text "avatar"
+    Element.image
+        [ width (px 50) ]
+        { src = "/avatar.jpeg", description = "avatar" }
 
 
 elmLogo : Element msg

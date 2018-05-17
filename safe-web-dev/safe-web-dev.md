@@ -18,6 +18,12 @@ Lots of innovation inspired by features & ethos
 
 ---
 
+# **What Does Safety Look Like In Your Codebase?**
+
+![](10.jpg)
+
+---
+
 # **Safety Tips**
 
 1. Traceability
@@ -382,4 +388,4 @@ catch contract violations at the gate and don't let them through.
 * Minimal interface
 * Opinionated, minimal
 
-![left ](2.jpg)
+![left ](12.jpg)
