@@ -22,6 +22,30 @@ main =
             ]
         ]
     <|
+        greeting
+
+
+greeting : Element msg
+greeting =
+    Element.text "Hello Agile and Beyond!"
+        |> Element.el [ Element.centerX, Element.alignTop, Element.padding 20, Font.size 80 ]
+
+
+navbar : Html msg
+navbar =
+    Element.layout
+        [ Background.color blue
+        , Font.color white
+        , Font.size 22
+        , Font.family
+            [ Font.external
+                { url = "https://fonts.googleapis.com/css?family=EB+Garamond"
+                , name = "EB Garamond"
+                }
+            , Font.sansSerif
+            ]
+        ]
+    <|
         Element.column []
             [ Element.row
                 [ height (px 100)
@@ -70,9 +94,3 @@ elmLogo =
     --     , label = Element.Input.labelLeft [] Element.none
     --     }
     Element.image [ width (px 50) ] { src = "/elm.png", description = "elm logo" }
-
-
-
--- el
---     [ width (px 200), height (px 200) ]
---     (text "Hello stylish friend!")
