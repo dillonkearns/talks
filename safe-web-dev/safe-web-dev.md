@@ -24,16 +24,6 @@ Lots of innovation inspired by features & ethos
 
 ---
 
-# **Safety Tips**
-
-1. Traceability
-1. Domain Modeling
-1. Consumer-Driven APIs
-
-![](climbing-gear.jpg)
-
----
-
 # **Elm** ![](https://upload.wikimedia.org/wikipedia/commons/f/f3/Elm_logo.svg)
 
 * Language for client-side web apps
@@ -46,6 +36,16 @@ Lots of innovation inspired by features & ethos
 * No runtime errors
 
 ![left](/Users/dillon/Downloads/IMG_4262.JPG)
+
+---
+
+# **Safety Tips**
+
+1. Traceability
+1. Domain Modeling
+1. Consumer-Driven APIs
+
+![](climbing-gear.jpg)
 
 ---
 
@@ -193,22 +193,33 @@ impossibleStates -- union types
 
 # **Decoding JSON**
 
-```elm
-  json = """{ "first": "Beverly", "last": "Crusher" }"""
+`````javascript
+json = { "first": "Beverly", "last": "Crusher" }
+```
 
-  decodeString (field "first" string) json
-    == Ok "Beverly"
+### Discover contract violations at the gate
+
+```elm
+decodeString (field "first" string) json
+-- =>
+Err "Expecting an object with a field named `name` but instead got: ..."
 ```
 
 ---
 
-```elm
-  json = """{ "first": "Beverly", "last": "Crusher" }"""
+# **Decoding JSON**
 
-  Decode.decodeString (Decode.field "name" Decode.string) json
-  -- =>
-  Err "Expecting an object with a field named `name` but instead got: ..."
+````javascript
+json = { "first": "Beverly", "last": "Crusher" }
 ```
+
+...
+
+```elm
+Decode.decodeString (Decode.field "name" Decode.string) json
+-- =>
+Ok "Beverly"
+`````
 
 ---
 
