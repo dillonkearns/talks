@@ -89,6 +89,33 @@ List.head [] == Nothing
 
 ---
 
+# **`Maybe` Compiler Feedback**
+
+```elm
+describeFirst myList =
+    case List.head myList of
+        Just firstItem ->
+            "The first item is: " ++ firstItem
+```
+
+![inline](compiler-errors/Maybe-error.png)
+
+---
+
+# **`Maybe` Compiler Feedback**
+
+```elm, [.highlight: 6-7]
+describeFirst myList =
+    case List.head myList of
+        Just firstItem ->
+            "The first item is: " ++ firstItem
+
+        Nothing ->
+            "The first item is not present!"
+```
+
+---
+
 # 1) **Traceability**
 
 ```elm, [.highlight: 1]
