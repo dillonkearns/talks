@@ -133,6 +133,35 @@ managedEffects
 
 ---
 
+# **Handling `Result`s**
+
+```elm
+intOrNegativeOne userInputString =
+    case String.toInt userInputString of
+        Ok intValue ->
+            intValue
+```
+
+---
+
+![fit](compiler-errors/Result-error.png)
+
+---
+
+# **Handling `Result`s**
+
+```elm
+intOrNegativeOne userInputString =
+    case String.toInt userInputString of
+        Ok intValue ->
+            intValue
+
+        Err errorMessage ->
+            -1
+```
+
+---
+
 # **Uncertainty as Data**
 
 ### The `Result` type
