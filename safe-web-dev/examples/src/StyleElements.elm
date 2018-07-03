@@ -43,18 +43,21 @@ view model =
 
 navbar : Model -> Element Msg
 navbar model =
-    Element.column []
+    Element.row
+        [ height (px 100)
+        , width fill
+        , Background.color darkCharcoal
+        , padding 20
+        ]
         [ Element.row
-            [ Background.color darkCharcoal
+            [ Element.spacing 10
+            , Element.padding 10
+            , Element.width Element.shrink
+            , Element.mouseOver [ Background.color Color.black ]
             ]
-            [ Element.row
-                [ Element.width Element.shrink
-                , Element.mouseOver [ Background.color Color.black ]
-                ]
-                (logoPanel model)
-            , links
-            , avatar
-            ]
+            (logoPanel model)
+        , links
+        , avatar
         ]
 
 
@@ -86,6 +89,12 @@ avatar =
 
 elmLogo : Element Msg
 elmLogo =
+    -- Element.Input.text [ Element.width (px 500), Font.color darkCharcoal ]
+    --     { onChange = Nothing
+    --     , text = ""
+    --     , placeholder = Just <| Element.Input.placeholder [ Font.color darkCharcoal ] (Element.text "")
+    --     , label = Element.Input.labelLeft [] Element.none
+    --     }
     Element.image [ width (px 50) ] { src = "/elm.png", description = "elm logo" }
 
 
