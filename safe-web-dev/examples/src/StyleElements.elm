@@ -89,12 +89,6 @@ avatar =
 
 elmLogo : Element Msg
 elmLogo =
-    -- Element.Input.text [ Element.width (px 500), Font.color darkCharcoal ]
-    --     { onChange = Nothing
-    --     , text = ""
-    --     , placeholder = Just <| Element.Input.placeholder [ Font.color darkCharcoal ] (Element.text "")
-    --     , label = Element.Input.labelLeft [] Element.none
-    --     }
     Element.image [ width (px 50) ] { src = "/elm.png", description = "elm logo" }
 
 
