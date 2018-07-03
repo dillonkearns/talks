@@ -184,22 +184,21 @@ String.toInt "3.1" == Err "could not convert string '3.1' to an Int"
 # Dealing With Uncertainty
 
 ```elm
-parseIntOrNegativeOne intString =
-  let
-    toIntResult =
-      String.toInt intString
-  in
-  case toIntResult of
-    Ok intValue ->
-      intValue
-    Err errorMessage ->
-      -1
+intOrNegativeOne userInputString =
+    case String.toInt userInputString of
+        Ok intValue ->
+            intValue
+
+        Err errorMessage ->
+            -1
 ```
 
 ### `case` can also be written as
 
 ```elm
-Result.withDefault -1 result
+userInputString
+  |> String.toInt
+  |> Result.withDefault -1
 ```
 
 ---
