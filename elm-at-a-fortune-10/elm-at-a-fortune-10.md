@@ -11,15 +11,17 @@ build-lists: true
 
 ---
 
-# **Context/Concerns**
+# **Concerns**
 
+- Internal experts
+- Learning resources (internal & external)
 - Knowledge transfer
-- Internal experts & learning resources
-- Other teams using Angular
 
 ---
 
 # **Our Angular Experience**
+
+**Internal Experts**
 
 - Experts _weren't_ experts
 - Senior devs > 1 year of Angular
@@ -32,23 +34,68 @@ build-lists: true
 
 # **Our Elm Experience**
 
+**Internal Experts**
+
 - Beginners are _confident_ like experts
 - Beginners _extract views_ like experts
+- Beginners _write tests_ like experts
 - Beginners _write code_ like experts
 
 ---
 
-# Inherited Angular Code
+# **Our Angular Experience**
 
-- Changing the app required rewriting everything we touched
-- Change the DOM from within an Angular component
-- Plain JS, no type-safety
-- Global variables
+**Learning Resources**
+
+- JavaScript & Angular learning wasn't sticky
+- Remember what _not_ to do
+- Silent errors
+- Subtle data-binding bugs which unit tests didn't reveal
+- Don't know if it works until you deeply inspect something
 
 ---
 
 ![left fit](img/js-the-good-parts.jpg)
 ![right fit](img/elm-in-action.png)
+
+---
+
+# **Our Elm Experience**
+
+**Learning Resources**
+
+- Elm has a tiny set of powerful, cohesive language features
+- Language features get smaller over time, not larger
+- If it's possible, it's not a hack
+- If it's idiomatic, it's safe
+
+---
+
+# **Our Angular Experience**
+
+**Knowledge Transfer**
+
+- Changing the app required rewriting everything we touched
+- Change the DOM from within an Angular component
+- Plain JS, no type-safety
+- Global variables
+- Had to learn what not to touch in the app
+
+---
+
+# **Our Elm Experience**
+
+**Knowledge Transfer**
+
+- New team members could contribute without fear on day 1
+- New team members were productive after 3 weeks
+- New team members learn Elm instead of caveats in our codebase
+
+---
+
+# **Why We Love Elm**
+
+![](../safe-web-dev/6.jpg)
 
 ---
 
@@ -63,6 +110,10 @@ build-lists: true
 ---
 
 # **Make Impossible States Impossible**
+
+---
+
+# **No Runtime Errors**
 
 ---
 
