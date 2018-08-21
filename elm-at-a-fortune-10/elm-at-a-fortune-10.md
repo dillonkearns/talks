@@ -11,6 +11,21 @@ build-lists: true
 
 ---
 
+# **Elm** ![](https://upload.wikimedia.org/wikipedia/commons/f/f3/Elm_logo.svg)
+
+- Language for client-side web apps
+- Compiles to JavaScript
+- Unlike TypeScript, ES2015, PureScript, etc., Elm lives in a sandbox
+- Elm can call JavaScript, but not directly
+- Like Haskell (much more approachable)
+- Language choices favor  simplicity
+- Explicit over terse
+- No runtime errors
+
+![left](/Users/dillon/Downloads/IMG_4262.JPG)
+
+---
+
 # **Concerns**
 
 - Internal experts
@@ -23,12 +38,12 @@ build-lists: true
 
 **Internal Experts**
 
-- Experts _weren't_ experts
 - Senior devs > 1 year of Angular
   - Regularly making basic mistakes
   - _Wiring_ parameters to components 🤔
   - Test _mock_ setup (false positives/negatives) 🤔
   - _Extracting_ components..... 🤔🤔🤔
+- Experts _weren't_ experts
 
 ---
 
@@ -113,7 +128,116 @@ build-lists: true
 
 ---
 
+# **Domain Modeling**
+
+- [Make Impossible States Impossible](https://www.youtube.com/watch?v=IcgmSRJHu_8)
+- Contract-Driven Design
+- More compiler guarantees =>
+  More focused tests & fewer bugs
+
+![left filtered](../safe-web-dev/climbing-gear2.jpg)
+
+---
+
+# **Domain Modeling**
+
+```elm, [.highlight: 1]
+contracts -- decoders
+impossibleStates -- union types
+```
+
+- Without contracts, errors creep deep into the system
+  => harder to trace
+- Untyped => Typed
+- No exceptions, errors are just data
+- Annoyance at first, can't live without it once you get used to it
+
+---
+
+# **Decoding JSON**
+
+`````javascript
+{ "first": "Beverly", "last": "Crusher" }
+```
+
+### Discover contract violations at the gate
+
+```elm
+decodeString (field "middle" string) json
+-- =>
+Err "Expecting an object with a field named `middle` but instead got: ..."
+```
+
+---
+
+# **Decoding JSON**
+
+````javascript
+{ "first": "Beverly", "last": "Crusher" }
+```
+
+...
+
+```elm
+Decode.decodeString (Decode.field "first" Decode.string) json
+-- =>
+Ok "Beverly"
+`````
+
+---
+
+# **Data Modeling Example**
+
+JavaScript
+
+```javascript
+{
+    hasError: true,
+    errorMessage : 'Error message from server',
+    doneLoading: true,
+    data: null
+}
+```
+
+---
+
+![fit](/Users/dillon/Downloads/Remote Data Truth Table - Sheet1 \(1\).pdf)
+
+---
+
+# Elm Data Modeling
+
+```elm
+type RemoteData data  -- we're defining a union type
+    = NotAsked
+    | Loading
+    | Failure Http.Error
+    | Success data
+```
+
+#### Constructing Union Types
+
+```elm
+Success { first = "James", last = "Kirk" }
+Failure Http.Timeout
+Loading
+```
+
+---
+
+[krisajenkins/remotedata](http://package.elm-lang.org/packages/krisajenkins/remotedata/latest)
+
+---
+
+# **The Elm Architecture**
+
+---
+
 # **No Runtime Errors**
+
+---
+
+![100%](img/elm19-assets.jpg)
 
 ---
 
