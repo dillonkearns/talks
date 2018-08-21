@@ -130,8 +130,7 @@ build-lists: true
 - Ship it to production! 🚢 🎉
 - Do we like it? Let's do more
 - Fetch its own data
-
--
+- Page except navbar in Elm
 
 ---
 
