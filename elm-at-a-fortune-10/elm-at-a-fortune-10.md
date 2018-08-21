@@ -108,6 +108,33 @@ build-lists: true
 
 ---
 
+# **Introducing Elm**
+
+- Lunch and learn
+- Seems interesting!
+- Elm Katas
+- People like it, do more
+- Let's try using it!
+
+---
+
+![original fit](img/incremental-deliver.jpg)
+
+---
+
+# **Incremental Transition**
+
+- Find a simple view in an area where we'll be doing feature work
+- Dumb table in Elm (data from Angular)
+- Fully wire it into our deploy pipeline
+- Ship it to production! 🚢 🎉
+- Do we like it? Let's do more
+- Fetch its own data
+
+-
+
+---
+
 # **Why We Love Elm**
 
 ![](../safe-web-dev/6.jpg)
