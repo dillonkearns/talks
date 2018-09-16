@@ -187,6 +187,16 @@ Reasons why I prefer it to ReasonML, PureScript, etc...
 
 # `elm-typescript-interop`
 
+# Code Generation
+
+- You already do it!
+- Not scary, just templating
+- Macros versus code generation
+  - Macros mutate the AST
+  - Makes it harder to trace what code is doing
+  - Code gen is just like a custom-tailored library for your domain!
+- Use it as a last resort
+
 # Future Ideas
 
 - Code generation libraries and blog posts
