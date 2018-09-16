@@ -53,6 +53,10 @@ update msg model =
       (model - 1, Cmd.none)
 ```
 
+# -
+
+![](./img/dopamine.jpeg)
+
 # JS
 
 ```javascript
@@ -123,8 +127,52 @@ value (EvenNumber currentValue) =
 
 # What Is Type-Safety?
 
-- It boils down to this: what can we know before we run our program?
+- The compiler doesn't magically make our code correct
+- But it allows us to express some very simple, concise constraints that we can inspect
+- It's like the difference between reasoning about a circuit-board being correct or an app.
+
+# Type-Safety
+
+It boils down to this:
+
+- What can we know before we run our program?
 - What can we know will always be true (invariants)?
+
+# The Problem
+
+We want to encode contracts into libraries.
+
+# Static Contracts
+
+This is great when we have a contract that does not vary based on the user.
+
+- CSS
+
+-
+
+# Contract Wrangling
+
+Although some contracts don't translate well to the strong guarantees we like to work with in Elm.
+
+This is where simplifying contracts is helpful.
+
+> Make Undesirable States Impossible
+
+# Variable Contracts
+
+But we can't always do that, because the contracts can vary.
+
+- API responses
+- Command-line interfaces
+- SQL database
+
+All are user-defined.
+
+# Summary of Contract Scenarios
+
+- Robust static contract - just hardcode (`remote-data`)
+- Weak static contract - simplify then hardcode (`elm-ui`, `elm-cli-options-parser`)
+- Variable contract - generate code using the same techniques as the above two (`dillonkearns/elm-graphql`)
 
 # TODO
 
