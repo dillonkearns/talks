@@ -150,8 +150,12 @@ This is great when we have a contract that does not vary based on the user.
 
 Weak (in terms of guarantees), Low-Level APIs
 
+These are strongly-typed because Elm is a strongly typed language. But they're guarantees are not strong, there is a lot of uncertainty
+, and there are a lot of ways to represent events that will never occur, or not handle events that will occur.
+
 - `elm/browser` Keyboard API (keypress, keydown, keyup) - have to decode JSON response which is vague in terms of possibilities.
 - -> [`ohanhi/keyboard`](https://package.elm-lang.org/packages/ohanhi/keyboard/latest/) treats this as byte-code
+- Json.Decode
 
 # Contract Wrangling
 
@@ -176,7 +180,36 @@ All are user-defined.
 - Robust static contract - just hardcode (`remote-data`)
 - Weak static contract - simplify then hardcode (`elm-ui`, `elm-plot`, `elm-cli-options-parser`)
   (Wrap the low-level stuff into a robust, high-level API... use it as "byte-code")
-- Variable contract - generate code using the same techniques as the above two (`dillonkearns/elm-graphql`)
+- Variable contract, Elm can be source of truth
+- Variable contract, external source of truth - generate code using the same techniques as the above two (`dillonkearns/elm-graphql`)
+
+# Representing Contracts in Elm
+
+- [Advanced Types posts](https://medium.com/@ckoster22/advanced-types-in-elm-opaque-types-ec5ec3b84ed2) - Charlie Koster
+- [Making Impossible States Impossible](https://www.youtube.com/watch?v=IcgmSRJHu_8) - Richard
+- [Make Data Structures](https://www.youtube.com/watch?v=x1FU3e0sT1I&list=PL-cYi7I913S-VgTSUKWhrUkReM_vMNQxG&index=11) - Richard
+- [Scaling Elm Apps](https://www.youtube.com/watch?v=DoA4Txr4GUs) - Richard
+
+## Building On Top of Low-Level, Weak Guarantee Contracts (catchy name?)
+
+- [Understanding Style](https://www.youtube.com/watch?v=NYb2GDWMIm0) - Matt Griffith
+
+# Strong Contract - GraphQL
+
+- GraphQL provides strong guarantees, and a robust type system.
+- Only a couple of exceptions:
+- Scalar types are not typed (yet...)
+
+# -
+
+Runtime error for mutually exclusive options
+
+![original fit](https://raw.githubusercontent.com/dillonkearns/graphqelm/master/assets/github-optional-arg-error.png)
+
+# `dillonkearns/elm-graphql`
+
+- Generates a hardcoded library for your API!
+- Uses `Json.Decode` library as byte-code, so you can only represent getting data that is 1) known to exist, and 2) will be correctly decoded
 
 # TODO
 
@@ -204,7 +237,15 @@ So Elm is type-safe, and JS isn't, right???
 
 # Conversely, is a MultipleOf3 module type-safe with all its internals exposed? Is it more type-safe with them hidden and opaque? I would argue that it is, because you are _using the compiler to help you make guarantees about your program before you run it_. Of course, this needs human help. But the really powerful kind of type-safety requires some thought, creativity, and domain modeling. It’s more than just making sure you pass an Int instead of a String, or a data type with a firstName, lastName.
 
----
+# Future Ideas
+
+- Code generation libraries and blog posts
+- `elm-electron` improvements
+
+# What I'd like to see next
+
+- Type-safe storage solution... you'd need to represent the schema, and provide a way to migrate from previous versions of the schema.
+  Could use ideas like Mario's [Evergreen Elm talk](https://www.youtube.com/watch?v=4T6nZffnfzg).
 
 # Thank You!
 
