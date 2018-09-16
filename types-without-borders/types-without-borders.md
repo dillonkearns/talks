@@ -102,6 +102,27 @@ You could even use Strings and lots of Maybes for your Msg type!
 
 Elm's type-safety mechanisms are just tools available to you to enforce guarantees about your code. But you have to use them!
 
+# JSON Decoding
+
+Runtime error - change code loop.
+This doesn't feel like the dopamine-inducing Elm experience we're used to. Why?
+
+It's still "type-safe" in the sense that we represent that uncertainty. But it is exactly that... uncertain that
+we'll get the data we want. Because what we're doing is making our best guess to replicate part of an
+external contract (external API, etc.) in our Elm code. Using code generation, we can replace that
+uncertainty with more guarantees! Which is what we love about Elm!
+
+# Contracts & Guarantees
+
+It's really about
+
+1.  What can I guarantee?
+2.  When I can I know it?
+
+With JS, you don't know until you run a particular line, with every permutation.
+
+With Elm, you can enforce contracts with the help of the compiler!
+
 # Guarantees
 
 ```elm
@@ -183,29 +204,6 @@ It boils down to this:
 
 We want to encode contracts into libraries.
 
-# Static Contracts
-
-This is great when we have a contract that does not vary based on the user.
-
-- CSS
-
-Weak (in terms of guarantees), Low-Level APIs
-
-These are strongly-typed because Elm is a strongly typed language. But they're guarantees are not strong, there is a lot of uncertainty
-, and there are a lot of ways to represent events that will never occur, or not handle events that will occur.
-
-- `elm/browser` Keyboard API (keypress, keydown, keyup) - have to decode JSON response which is vague in terms of possibilities.
-- -> [`ohanhi/keyboard`](https://package.elm-lang.org/packages/ohanhi/keyboard/latest/) treats this as byte-code
-- Json.Decode
-
-# Contract Wrangling
-
-Although some contracts don't translate well to the strong guarantees we like to work with in Elm.
-
-This is where simplifying contracts is helpful.
-
-> Make Undesirable States Impossible
-
 # Variable Contracts
 
 But we can't always do that, because the contracts can vary.
@@ -215,22 +213,6 @@ But we can't always do that, because the contracts can vary.
 - SQL database
 
 All are user-defined.
-
-# Impossible Vs. Undesirable States
-
-With CSS, there are a lot of impossible states that are still undesirable.
-
-Undesirable States
-
-Contrast that with a simple contract that we do represent in Elm (`elm-ui`, `elm-cli-options-parser`... but not Elm CSS, because it’s not much of a contract... make undesirable states impossible)
-
-# Summary of Contract Scenarios
-
-- Robust static contract - just hardcode (`remote-data`)
-- Weak static contract - simplify then hardcode (`elm-ui`, `elm-plot`, `elm-cli-options-parser`)
-  (Wrap the low-level stuff into a robust, high-level API... use it as "byte-code")
-- Variable contract, Elm can be source of truth
-- Variable contract, external source of truth - generate code using the same techniques as the above two (`dillonkearns/elm-graphql`)
 
 # Representing Contracts in Elm
 
