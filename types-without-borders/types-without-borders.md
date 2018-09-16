@@ -148,7 +148,10 @@ This is great when we have a contract that does not vary based on the user.
 
 - CSS
 
--
+Weak (in terms of guarantees), Low-Level APIs
+
+- `elm/browser` Keyboard API (keypress, keydown, keyup) - have to decode JSON response which is vague in terms of possibilities.
+- -> [`ohanhi/keyboard`](https://package.elm-lang.org/packages/ohanhi/keyboard/latest/) treats this as byte-code
 
 # Contract Wrangling
 
@@ -171,7 +174,8 @@ All are user-defined.
 # Summary of Contract Scenarios
 
 - Robust static contract - just hardcode (`remote-data`)
-- Weak static contract - simplify then hardcode (`elm-ui`, `elm-cli-options-parser`)
+- Weak static contract - simplify then hardcode (`elm-ui`, `elm-plot`, `elm-cli-options-parser`)
+  (Wrap the low-level stuff into a robust, high-level API... use it as "byte-code")
 - Variable contract - generate code using the same techniques as the above two (`dillonkearns/elm-graphql`)
 
 # TODO
