@@ -71,18 +71,7 @@ let json = Json.parse(stringFromServer);
 
 Don't know until we hit that line!
 
-# In JS
-
-It doesn’t work the first time, no feedback except from verbose “wiring” tests and manual inspection. Often we have to not only run, but deeply run our program to know what is true (don't have any guarantees until we've hit that line... and with every permutation of state!).
-
-# Uncertainty in Elm
-
-Sure, it's type-safe... but it's not the "if it compiles, it works" that we're used to with a lot of Elm code. What's the difference?
-
-Compile-inspect cycle within Elm when we decode JSON
-We're dealing with external contracts that we haven’t represented in Elm. So we have to represent uncertainty. In that sense it's type-safe, but there are still a lot of things we don't know until we hit that code. The main difference is that we represent that uncertainty (with the `Result` type, `Maybe`, etc.).
-
-And you check that contract at the gate, so at least you don't have to deeply run your app to know whether the contract you thought it followed was indeed followed.
+No dopamine! ☹️
 
 # Is Elm "Type-Safe"?
 
@@ -102,6 +91,19 @@ You could even use Strings and lots of Maybes for your Msg type!
 
 Elm's type-safety mechanisms are just tools available to you to enforce guarantees about your code. But you have to use them!
 
+# In JS
+
+It doesn’t work the first time, no feedback except from verbose “wiring” tests and manual inspection. Often we have to not only run, but deeply run our program to know what is true (don't have any guarantees until we've hit that line... and with every permutation of state!).
+
+# Uncertainty in Elm
+
+Sure, it's type-safe... but it's not the "if it compiles, it works" that we're used to with a lot of Elm code. What's the difference?
+
+Compile-inspect cycle within Elm when we decode JSON
+We're dealing with external contracts that we haven’t represented in Elm. So we have to represent uncertainty. In that sense it's type-safe, but there are still a lot of things we don't know until we hit that code. The main difference is that we represent that uncertainty (with the `Result` type, `Maybe`, etc.).
+
+And you check that contract at the gate, so at least you don't have to deeply run your app to know whether the contract you thought it followed was indeed followed.
+
 # JSON Decoding
 
 Runtime error - change code loop.
@@ -116,89 +118,12 @@ uncertainty with more guarantees! Which is what we love about Elm!
 
 It's really about
 
-1.  What can I guarantee?
+1.  What can I guarantee? (not just "be pretty sure about")
 2.  When I can I know it?
 
 With JS, you don't know until you run a particular line, with every permutation.
 
 With Elm, you can enforce contracts with the help of the compiler!
-
-# Guarantees
-
-```elm
-module EvenNumber exposing (EvenNumber, two, value)
-
-
-type EvenNumber
-    = EvenNumber Int
-
-
-two : EvenNumber
-two =
-    EvenNumber 0
-
-
-add2 : EvenNumber -> EvenNumber
-add2 (EvenNumber currentValue) =
-    EvenNumber (currentValue + 2)
-
-
-value : EvenNumber -> Int
-value (EvenNumber currentValue) =
-    currentValue
-```
-
-# Not Opaque
-
-```elm
-module EvenNumber exposing (EvenNumber(EvenNumber), two, value)
-
-
-type EvenNumber
-    = EvenNumber Int
-
-
-two : EvenNumber
-two =
-    EvenNumber 0
-
-
-add2 : EvenNumber -> EvenNumber
-add2 (EvenNumber currentValue) =
-    EvenNumber (currentValue + 2)
-
-
-value : EvenNumber -> Int
-value (EvenNumber currentValue) =
-    currentValue
-```
-
-# What Is Type-Safety?
-
-- The compiler doesn't magically make our code correct
-- But it allows us to express some very simple, concise constraints that we can inspect
-- It's like the difference between reasoning about a circuit-board being correct or an app.
-
-# Type-Safety
-
-It boils down to this:
-
-- What can we know before we run our program?
-- What can we know will always be true (invariants)?
-
-# Type-Safety
-
-- Too theoretical, let's not get stuck on definitions.
-- How can we know stuff about our program sooner
-- How can we guarantee certain constraints with our programs, and have them enforced by the compiler so it's impossible to forget it.
-- Basically, this allows us to reduce the cognitive load (don't have to keep thinking whether we're respecting certain invariants, we think about it once, in one place, then take it for granted everywhere else)
-- In other words: let's make good use of our compiler!
-
-# Conversely, is a MultipleOf3 module type-safe with all its internals exposed? Is it more type-safe with them hidden and opaque? I would argue that it is, because you are _using the compiler to help you make guarantees about your program before you run it_. Of course, this needs human help. But the really powerful kind of type-safety requires some thought, creativity, and domain modeling. It’s more than just making sure you pass an Int instead of a String, or a data type with a firstName, lastName.
-
-# More Than Just Type-Checking
-
-... It's About Guarantees, which are a superset of type-checking.
 
 # The Problem
 
