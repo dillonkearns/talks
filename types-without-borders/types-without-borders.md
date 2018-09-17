@@ -133,6 +133,62 @@ It's really about
 
 TODO Graphic with timeline of when you can know things, from compile-time to run-time to run with the right values/environment/global variables.
 
+# APIs in Elm
+
+```elm
+type Character
+    = Human { name : String, primaryFunction : String }
+    | Droid { name : String, homePlanet : String }
+
+decoder : Decode.Decoder Character
+decoder =
+    Decode.string
+        |> Decode.andThen
+            (\string ->
+                case string of
+                    "human" ->
+                        humanDecoder
+
+                    "droid" ->
+                        droidDecoder
+
+                    _ ->
+                        Decode.fail "Invalid Character"
+            )
+        |> Decode.field "kind"
+```
+
+^ Assumptions checked at gate.
+Still, duplicate contract.
+
+# Details
+
+```elm
+humanDecoder : Decode.Decoder Character
+humanDecoder =
+    Decode.map2 HumanAttributes
+        (Decode.field "name" Decode.string)
+        (Decode.field "homePlanet" Decode.string)
+        |> Decode.map Human
+
+
+droidDecoder : Decode.Decoder Character
+droidDecoder =
+    Decode.map2 DroidAttributes
+        (Decode.field "name" Decode.string)
+        (Decode.field "primaryFunction" Decode.string)
+        |> Decode.map Droid
+```
+
+# Out of Sync Contracts
+
+```elm
+Err "Expecting an object with a field named `name` but instead got: ..."
+```
+
+^ Validate assumptions immidiately!
+Still, assumptions!
+
 # Variable Contracts
 
 We want to encode contracts into libraries.
@@ -143,16 +199,6 @@ But we can't always do that, because the contracts can vary.
 - Command-line interfaces
 - SQL database
 - Any user-defined contract
-
-# Representing Contracts in Elm
-
-- [Advanced Types posts](https://medium.com/@ckoster22/advanced-types-in-elm-opaque-types-ec5ec3b84ed2) - Charlie Koster
-- [Making Impossible States Impossible](https://www.youtube.com/watch?v=IcgmSRJHu_8) - Richard
-- [Make Data Structures](https://www.youtube.com/watch?v=x1FU3e0sT1I&list=PL-cYi7I913S-VgTSUKWhrUkReM_vMNQxG&index=11) - Richard
-- [Scaling Elm Apps](https://www.youtube.com/watch?v=DoA4Txr4GUs) - Richard
-
-* [Understanding Style](https://www.youtube.com/watch?v=NYb2GDWMIm0) - Matt Griffith
-  (Building On Top of Low-Level, Weak Guarantee Contracts)
 
 # GraphQL
 
@@ -171,6 +217,26 @@ Runtime error for mutually exclusive options
 - Generates a hardcoded library for your API!
 - Uses `Json.Decode` library as byte-code, so you can only represent getting data that is 1) known to exist, and 2) will be correctly decoded
 
+# -
+
+![](./img/interop/1.jpg)
+
+# -
+
+![](./img/interop/2.jpg)
+
+# -
+
+![](./img/interop/3.jpg)
+
+# -
+
+![](./img/interop/4.jpg)
+
+# -
+
+![](./img/interop/5.jpg)
+
 # TypeScript
 
 Reasons why I prefer it to ReasonML, PureScript, etc...
@@ -187,22 +253,6 @@ Reasons why I prefer it to ReasonML, PureScript, etc...
 - Can represent Union Types (like Elm Custom Types, just a little more verbose)
 - Just add a `tsconfig.json`!
 - Superset of JS, same semantics
-
-# -
-
-![](./img/interop/1.jpg)
-
-# -
-
-![](./img/interop/2.jpg)
-
-# -
-
-![](./img/interop/3.jpg)
-
-# -
-
-![](./img/interop/4.jpg)
 
 # -
 
@@ -239,9 +289,20 @@ Reasons why I prefer it to ReasonML, PureScript, etc...
   - Code gen is just like a custom-tailored library for your domain!
 - Use it as a last resort
 
+# Representing Contracts in Elm
+
+- [Advanced Types posts](https://medium.com/@ckoster22/advanced-types-in-elm-opaque-types-ec5ec3b84ed2) - Charlie Koster
+- [Making Impossible States Impossible](https://www.youtube.com/watch?v=IcgmSRJHu_8) - Richard
+- [Make Data Structures](https://www.youtube.com/watch?v=x1FU3e0sT1I&list=PL-cYi7I913S-VgTSUKWhrUkReM_vMNQxG&index=11) - Richard
+- [Scaling Elm Apps](https://www.youtube.com/watch?v=DoA4Txr4GUs) - Richard
+
+* [Understanding Style](https://www.youtube.com/watch?v=NYb2GDWMIm0) - Matt Griffith
+  (Building On Top of Low-Level, Weak Guarantee Contracts)
+
 # Future Ideas
 
 - Code generation libraries and blog posts
+- AST with types & imports resolved
 - `elm-electron` improvements
 
 # What I'd like to see next
