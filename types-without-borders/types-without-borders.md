@@ -189,6 +189,26 @@ Err "Expecting an object with a field named `name` but instead got: ..."
 ^ Validate assumptions immidiately!
 Still, assumptions!
 
+# -
+
+![](./img/api/1.jpg)
+
+# -
+
+![](./img/api/2.jpg)
+
+# -
+
+![](./img/api/3.jpg)
+
+# -
+
+![](./img/api/4.jpg)
+
+# -
+
+![](./img/api/5.jpg)
+
 # Variable Contracts
 
 We want to encode contracts into libraries.
@@ -212,10 +232,26 @@ Runtime error for mutually exclusive options
 
 ![original fit](https://raw.githubusercontent.com/dillonkearns/graphqelm/master/assets/github-optional-arg-error.png)
 
+# -
+
+![](./img/api/5.jpg)
+
+# -
+
+![](./img/api/6.jpg)
+
 # `dillonkearns/elm-graphql`
 
 - Generates a hardcoded library for your API!
 - Uses `Json.Decode` library as byte-code, so you can only represent getting data that is 1) known to exist, and 2) will be correctly decoded
+
+# -
+
+![](./img/api/6.jpg)
+
+# -
+
+![](./img/api/7.jpg)
 
 # -
 
