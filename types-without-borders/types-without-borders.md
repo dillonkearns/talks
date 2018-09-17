@@ -92,10 +92,10 @@ decoder =
                     _ -> Decode.fail "Invalid Character")
 ```
 
-^ Assumptions checked at gate.
+^ Check assumptions at gate.
 Still, duplicate contract.
 
-# Details
+# Nested Decoders
 
 ```elm
 humanDecoder : Decode.Decoder Character
@@ -114,6 +114,10 @@ droidDecoder =
         |> Decode.map Droid
 ```
 
+^ Tedious.
+More important:
+No guarantees.
+
 # Out of Sync Contracts
 
 ```elm
@@ -128,8 +132,7 @@ Still, assumptions!
 
 ![original](./img/run-fix.jpg)
 
-^ Find out earlier...
-Not what we signed up for!
+^ Not what we signed up for!
 
 # We Prefer Guarantees!
 
@@ -157,17 +160,6 @@ But with more guarantees
 # -
 
 ![](./img/api/5.jpg)
-
-# Variable Contracts
-
-We want to encode contracts into libraries.
-
-But we can't always do that, because the contracts can vary.
-
-- API responses
-- Command-line interfaces
-- SQL database
-- Any user-defined contract
 
 # GraphQL
 
@@ -263,6 +255,17 @@ Reasons why I prefer it to ReasonML, PureScript, etc...
 # Wrapping `LocalStorage`
 
 # `elm-typescript-interop`
+
+# Variable Contracts
+
+We want to encode contracts into libraries.
+
+But we can't always do that, because the contracts can vary.
+
+- API responses
+- Command-line interfaces
+- SQL database
+- Any user-defined contract
 
 # Code Generation
 
