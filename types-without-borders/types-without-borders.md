@@ -35,7 +35,7 @@ update msg model =
       (model + 1, Cmd.none)
 ```
 
-This `case` does not have branches for all possibilities...
+- This `case` does not have branches for all possibilities...
 
 # Make it compile
 
@@ -69,29 +69,12 @@ let json = Json.parse(stringFromServer);
 let json = Json.parse(stringFromServer);
 ```
 
-Don't know until we hit that line!
+- `Uncaught ReferenceError: Json is not defined`
+- Don't know until runtime.
+- No dopamine! ☹️
 
-No dopamine! ☹️
-
-It doesn’t work the first time, no feedback except from verbose “wiring” tests and manual inspection. Often we have to not only run, but deeply run our program to know what is true (don't have any guarantees until we've hit that line... and with every permutation of state!).
-
-# Is Elm "Type-Safe"?
-
-You can build type-safe Elm... or not so type-safe Elm...
-
-```elm
-type alias Msg =
-  {
-    kind: String
-    , user : Maybe User
-    , commentToPost : Maybe String
-    -- , ...
-  }
-```
-
-You could even use Strings and lots of Maybes for your Msg type!
-
-Elm's type-safety mechanisms are just tools available to you to enforce guarantees about your code. But you have to use them!
+^ Feedback from wiring tests, manual inspection
+Deeply run with permutations
 
 # Uncertainty in Elm
 
@@ -107,10 +90,6 @@ It's still "type-safe" in the sense that we represent that uncertainty. But it i
 we'll get the data we want. Because what we're doing is making our best guess to replicate part of an
 external contract (external API, etc.) in our Elm code. Using code generation, we can replace that
 uncertainty with more guarantees! Which is what we love about Elm!
-
-# TODO
-
-TODO graphic showing external contracts... pushing the borders out to encompass/represent that contract in Elm.
 
 # Contracts & Guarantees
 
@@ -188,6 +167,20 @@ Err "Expecting an object with a field named `name` but instead got: ..."
 
 ^ Validate assumptions immidiately!
 Still, assumptions!
+
+# Validate Assumptions
+
+![original](./img/run-fix.jpg)
+
+^ Find out earlier...
+Not what we signed up for!
+
+# We Prefer Guarantees!
+
+![original](./img/compile-fix.jpg)
+
+^ Still run
+But with more guarantees
 
 # -
 
