@@ -83,20 +83,13 @@ type Character
 
 decoder : Decode.Decoder Character
 decoder =
-    Decode.string
+    Decode.field "type" Decode.string
         |> Decode.andThen
-            (\string ->
-                case string of
-                    "human" ->
-                        humanDecoder
-
-                    "droid" ->
-                        droidDecoder
-
-                    _ ->
-                        Decode.fail "Invalid Character"
-            )
-        |> Decode.field "kind"
+            (\characterType ->
+                case characterType of
+                    "human" -> humanDecoder
+                    "droid" -> droidDecoder
+                    _ -> Decode.fail "Invalid Character")
 ```
 
 ^ Assumptions checked at gate.
