@@ -108,6 +108,10 @@ we'll get the data we want. Because what we're doing is making our best guess to
 external contract (external API, etc.) in our Elm code. Using code generation, we can replace that
 uncertainty with more guarantees! Which is what we love about Elm!
 
+# TODO
+
+TODO graphic showing external contracts... pushing the borders out to encompass/represent that contract in Elm.
+
 # Contracts & Guarantees
 
 It's really about
@@ -115,13 +119,19 @@ It's really about
 1.  What can I guarantee? (not just "be pretty sure about")
 2.  When I can I know it?
 
-With JS, you don't know until you run a particular line, with every permutation.
+# TODO slide name
 
-With Elm, you can enforce contracts with the help of the compiler!
+- With JS, you don't know until you run a particular line, with every permutation.
 
-This is all great if your Elm code is the source of truth for the contract. But it doesn't help much if
-the source of truth is an external system! It requires trial-and-error to duplicate the contract accurately.
-Plus it could get out of sync at any time!
+- With Elm, you can enforce contracts with the help of the compiler!
+
+- This is all great if your Elm code is the source of truth for the contract. But it doesn't help much if
+  the source of truth is an external system! It requires trial-and-error to duplicate the contract accurately.
+  Plus it could get out of sync at any time!
+
+# TODO
+
+TODO Graphic with timeline of when you can know things, from compile-time to run-time to run with the right values/environment/global variables.
 
 # Variable Contracts
 
@@ -132,8 +142,7 @@ But we can't always do that, because the contracts can vary.
 - API responses
 - Command-line interfaces
 - SQL database
-
-All are user-defined.
+- Any user-defined contract
 
 # Representing Contracts in Elm
 
@@ -142,9 +151,8 @@ All are user-defined.
 - [Make Data Structures](https://www.youtube.com/watch?v=x1FU3e0sT1I&list=PL-cYi7I913S-VgTSUKWhrUkReM_vMNQxG&index=11) - Richard
 - [Scaling Elm Apps](https://www.youtube.com/watch?v=DoA4Txr4GUs) - Richard
 
-## Building On Top of Low-Level, Weak Guarantee Contracts (catchy name?)
-
-- [Understanding Style](https://www.youtube.com/watch?v=NYb2GDWMIm0) - Matt Griffith
+* [Understanding Style](https://www.youtube.com/watch?v=NYb2GDWMIm0) - Matt Griffith
+  (Building On Top of Low-Level, Weak Guarantee Contracts)
 
 # GraphQL
 
@@ -177,6 +185,40 @@ Reasons why I prefer it to ReasonML, PureScript, etc...
 - Excellent editor integration.
 - Surprisingly good autocompletion.
 - Can represent Union Types (like Elm Custom Types, just a little more verbose)
+- Just add a `tsconfig.json`!
+- Superset of JS, same semantics
+
+# -
+
+![](./img/interop/1.jpg)
+
+# -
+
+![](./img/interop/2.jpg)
+
+# -
+
+![](./img/interop/3.jpg)
+
+# -
+
+![](./img/interop/4.jpg)
+
+# -
+
+![](./img/interop/5.jpg)
+
+# -
+
+![](./img/interop/6.jpg)
+
+# -
+
+![](./img/interop/7.jpg)
+
+# -
+
+![](./img/interop/8.jpg)
 
 # Installing Type Definitions `@types/...`
 
