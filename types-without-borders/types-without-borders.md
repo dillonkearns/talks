@@ -57,12 +57,6 @@ update msg model =
 
 ![](./img/dopamine.jpeg)
 
-# JS
-
-```javascript
-let json = Json.parse(stringFromServer);
-```
-
 # JS Feedback
 
 ```javascript
@@ -75,38 +69,6 @@ let json = Json.parse(stringFromServer);
 
 ^ Feedback from wiring tests, manual inspection
 Deeply run with permutations
-
-# Uncertainty in Elm
-
-Sure, it's type-safe... but it's not the "if it compiles, it works" that we're used to with a lot of Elm code.
-This doesn't feel like the dopamine-inducing Elm experience we're used to. What's the difference?
-
-Compile-run-runtime error-fix cycle within Elm when we decode JSON
-We're dealing with external contracts that we haven’t represented in Elm. So we have to represent uncertainty. In that sense it's type-safe, but there are still a lot of things we don't know until we hit that code. The main difference is that we represent that uncertainty (with the `Result` type, `Maybe`, etc.).
-
-And you check that contract at the gate, so at least you don't have to deeply run your app to know whether the contract you thought it followed was indeed followed.
-
-It's still "type-safe" in the sense that we represent that uncertainty. But it is exactly that... uncertain that
-we'll get the data we want. Because what we're doing is making our best guess to replicate part of an
-external contract (external API, etc.) in our Elm code. Using code generation, we can replace that
-uncertainty with more guarantees! Which is what we love about Elm!
-
-# Contracts & Guarantees
-
-It's really about
-
-1.  What can I guarantee? (not just "be pretty sure about")
-2.  When I can I know it?
-
-# TODO slide name
-
-- With JS, you don't know until you run a particular line, with every permutation.
-
-- With Elm, you can enforce contracts with the help of the compiler!
-
-- This is all great if your Elm code is the source of truth for the contract. But it doesn't help much if
-  the source of truth is an external system! It requires trial-and-error to duplicate the contract accurately.
-  Plus it could get out of sync at any time!
 
 # TODO
 
@@ -165,7 +127,8 @@ droidDecoder =
 Err "Expecting an object with a field named `name` but instead got: ..."
 ```
 
-^ Validate assumptions immidiately!
+^ Validate assumptions immediately 👍
+Represent uncertainty 👍
 Still, assumptions!
 
 # Validate Assumptions
