@@ -1,0 +1,23 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" x="0" y="0" viewBox="-40 -40 403 403" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs xmlns="http://www.w3.org/1999/xhtml"></defs>
+  <g>
+    <polygon fill="#eee" points="161.649,152.782 231.514,82.916 91.783,82.916"/>
+    <polygon fill="#eee" points="8.867,0 79.241,70.375 232.213,70.375 161.838,0"/>
+    <rect fill="#eee" x="192.99" y="107.392" width="107.676" height="108.167" transform="matrix(0.7071 0.7071 -0.7071 0.7071 186.4727 -127.2386)"/>
+    <polygon fill="#eee" points="323.298,143.724 323.298,0 179.573,0"/>
+    <polygon fill="#eee" points="152.781,161.649 0,8.868 0,314.432"/>
+    <polygon fill="#eee" points="255.522,246.655 323.298,314.432 323.298,178.879"/>
+    <polygon fill="#eee" points="161.649,170.517 8.869,323.298 314.43,323.298"/>
+  </g>
+  <path d="M 329.298 -6 h -335.298 v 335.298 h 335.298 v -164.5 L 246 247" stroke="black" stroke-width="12" fill="none"/>
+  <g>
+    <circle cx="329.298" cy="-6" r="20" stroke="black" stroke-width="10" fill="#60B5CC"/>
+    <circle cx="-6" cy="-6" r="20" stroke="black" stroke-width="10" fill="#7FD13B"/>
+    <circle cx="-6" cy="329.298" r="20" stroke="black" stroke-width="10" fill="#5A6378"/>
+    <circle cx="329.298" cy="329.298" r="20" stroke="black" stroke-width="10" fill="#F0AD00"/>
+    <circle cx="329.298" cy="161.649" r="20" stroke="black" stroke-width="10" fill="#FFF"/>
+    <circle cx="246" cy="246" r="20" stroke="black" stroke-width="10" fill="#E535AB"/>
+  </g>
+</svg>

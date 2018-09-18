@@ -194,6 +194,10 @@ Runtime error for mutually exclusive options
 
 ![](./img/api/7.jpg)
 
+# Demo!
+
+![original 70%](./img/elm-graphql.png)
+
 # -
 
 ![](./img/interop/1.jpg)
@@ -258,14 +262,13 @@ Reasons why I prefer it to ReasonML, PureScript, etc...
 
 # Variable Contracts
 
-We want to encode contracts into libraries.
-
-But we can't always do that, because the contracts can vary.
-
 - API responses
 - Command-line interfaces
 - SQL database
 - Any user-defined contract
+
+^ Encode contracts into libraries.
+Can't always, contracts vary.
 
 # Code Generation
 
