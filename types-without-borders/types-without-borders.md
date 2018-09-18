@@ -220,20 +220,14 @@ Runtime error for mutually exclusive options
 
 # TypeScript
 
-Reasons why I prefer it to ReasonML, PureScript, etc...
+Why not PureScript, ReasonML, etc.?
 
-- If I'm doing interop to a language from Elm, I don't want to then have to
-  do another layer of interop from (PureScript, ReasonML, etc.) in order to finally
-  get to the Web Platform API or NPM package I needed to use. (Reasonable people can
-  come to different conclusions, but this is my thinking.)
-
-# TypeScript Features I like
-
-- Excellent editor integration.
-- Surprisingly good autocompletion.
-- Can represent Union Types (like Elm Custom Types, just a little more verbose)
+- Avoid double-interop
+- Superset of JS
+- Can add types for npm packages
+- Editor integration, auto-complete
+- Union Types
 - Just add a `tsconfig.json`!
-- Superset of JS, same semantics
 
 # -
 
