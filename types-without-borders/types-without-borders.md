@@ -295,11 +295,16 @@ Can't always, contracts vary.
 - Code generation libraries and blog posts
 - AST with types & imports resolved
 - `elm-electron` improvements
+- Type-safe storage
+- Your ideas!
 
-# What I'd like to see next
+# [Evergreen Elm](https://www.youtube.com/watch?v=4T6nZffnfzg)
 
-- Type-safe storage solution... you'd need to represent the schema, and provide a way to migrate from previous versions of the schema.
-  Could use ideas like Mario's [Evergreen Elm talk](https://www.youtube.com/watch?v=4T6nZffnfzg).
+![original 50%](./img/evergreen-elm.png)
+
+^ Storage
+Represent schema
+Way to migrate from previous schema.
 
 # Thank You!
 
