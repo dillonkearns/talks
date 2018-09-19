@@ -164,8 +164,7 @@ But with more guarantees
 # GraphQL
 
 - GraphQL provides strong guarantees, and a robust type system.
-- Only a couple of exceptions:
-- Scalar types are not typed (yet...)
+- Only a couple of exceptions
 
 # -
 
