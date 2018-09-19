@@ -7,7 +7,7 @@ build-lists: true
 
 ### [incrementalelm.com](http://incrementalelm.com)
 
-![](../safe-web-dev/climbing.jpg)
+![original right](./img/idaho.jpg)
 
 # Type-Safe Elm
 
@@ -164,7 +164,24 @@ But with more guarantees
 # GraphQL
 
 - GraphQL provides strong guarantees, and a robust type system.
-- Only a couple of exceptions
+
+# GraphQL Objects
+
+```haskell
+type Character {
+  name: String!
+  appearsIn: [Episode]!
+}
+```
+
+# GraphQL Arguments
+
+```haskell
+type Query {
+  hero(episode: Episode): Character
+  character(id: ID!): Character
+}
+```
 
 # -
 
@@ -184,6 +201,38 @@ Runtime error for mutually exclusive options
 
 - Generates a hardcoded library for your API!
 - Uses `Json.Decode` library as byte-code, so you can only represent getting data that is 1) known to exist, and 2) will be correctly decoded
+
+# `Json.Decode.Pipeline`
+
+```elm
+type alias User =
+  { username : String
+  , name : Maybe String
+  , createdAt : Time.Posix
+  }
+
+userDecoder =
+  Decode.succeed User
+    |> required "login" string
+    |> required "name" (nullable string)
+    |> optional "createdAt" dateTimeDecoder
+```
+
+# `dillonkearns/elm-graphql`
+
+```elm
+type alias User =
+  { username : String
+  , name : Maybe String
+  , createdAt : Github.Scalar.DateTime
+  }
+
+userSelection =
+  Github.Object.User.selection User
+    |> with Github.Object.User.login
+    |> with Github.Object.User.name
+    |> with Github.Object.User.createdAt
+```
 
 # -
 
@@ -305,4 +354,4 @@ Way to migrate from previous schema.
 
 ### [incrementalelm.com](http://incrementalelm.com)
 
-![](../safe-web-dev/climbing.jpg)
+![right](./img/idaho.jpg)
