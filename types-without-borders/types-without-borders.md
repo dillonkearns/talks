@@ -143,6 +143,21 @@ Still assumptions.
 But with more guarantees
 Single source of truth
 
+# Single Source of Truth
+
+```elm
+type Msg
+  = Increment
+  | Decrement
+
+update msg model =
+  case msg of
+    Increment ->
+      (model + 1, Cmd.none)
+
+    -- You forgot a case!
+```
+
 # -
 
 ![](./img/api/1.jpg)
