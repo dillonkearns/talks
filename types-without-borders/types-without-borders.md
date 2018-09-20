@@ -275,14 +275,14 @@ userDecoder =
 type alias User =
   { username : String
   , name : Maybe String
-  , createdAt : Github.Scalar.DateTime
+  , createdAt : Time.Posix
   }
 
 userSelection =
-  Github.Object.User.selection User
-    |> with Github.Object.User.login
-    |> with Github.Object.User.name
-    |> with Github.Object.User.createdAt
+  GithubUser.selection User
+    |> with GithubUser.login
+    |> with GithubUser.name
+    |> with (GithubUser.createdAt |> mapToPosix)
 ```
 
 ^ Defines a request.
