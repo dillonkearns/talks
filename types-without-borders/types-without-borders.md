@@ -250,6 +250,10 @@ userSelection =
 
 # -
 
+![](./img/dopamine4.jpg)
+
+# -
+
 ![](./img/interop/1.jpg)
 
 # -
@@ -291,10 +295,6 @@ Why not PureScript, ReasonML, etc.?
 
 ![](./img/interop/7.jpg)
 
-# -
-
-![](./img/interop/8.jpg)
-
 # `npm install @types/<npm-library>`
 
 - Often comes included (`electron`, `moment`, etc.)
@@ -303,7 +303,21 @@ Why not PureScript, ReasonML, etc.?
 ^ Show generated code
 Show that it knows the lookup results in `null | string`... it will be happy if we wrap it in an if. And then we can send it to the appropriate port.
 
-# `elm-typescript-interop`
+# Demo!
+
+`elm-typescript-interop`
+
+# -
+
+![](./img/interop/7.jpg)
+
+# -
+
+![](./img/interop/8.jpg)
+
+# -
+
+![](./img/dopamine6.jpg)
 
 # Variable Contracts
 
