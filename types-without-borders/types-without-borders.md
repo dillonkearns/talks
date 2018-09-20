@@ -105,8 +105,6 @@ droidDecoder =
 More important:
 No guarantees.
 
----
-
 # Expecting an object with a field named `name` but instead got...
 
 ^ Validate assumptions immediately 👍
@@ -119,6 +117,17 @@ Deeply run with permutations
 # -
 
 ![](./img/sad1.jpg)
+
+# Implicit Assumptions
+
+```javascript
+greet(jsonResponse.name);
+```
+
+- `"Hello [object Object]!"`
+
+^ Explicit is better.
+Still assumptions.
 
 # Validate Assumptions
 
