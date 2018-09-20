@@ -57,19 +57,6 @@ update msg model =
 
 ![](./img/dopamine.jpeg)
 
-# JS Feedback
-
-```javascript
-let json = Json.parse(stringFromServer);
-```
-
-- `Uncaught ReferenceError: Json is not defined`
-- Don't know until runtime.
-- No dopamine! ☹️
-
-^ Feedback from wiring tests, manual inspection
-Deeply run with permutations
-
 # TODO
 
 TODO Graphic with timeline of when you can know things, from compile-time to run-time to run with the right values/environment/global variables.
@@ -78,8 +65,8 @@ TODO Graphic with timeline of when you can know things, from compile-time to run
 
 ```elm
 type Character
-    = Human { name : String, primaryFunction : String }
-    | Droid { name : String, homePlanet : String }
+    = Human { name : String, homePlanet : String }
+    | Droid { name : String, primaryFunction : String }
 
 decoder : Decode.Decoder Character
 decoder =
@@ -118,15 +105,20 @@ droidDecoder =
 More important:
 No guarantees.
 
-# Out of Sync Contracts
+---
 
-```elm
-Err "Expecting an object with a field named `name` but instead got: ..."
-```
+# Expecting an object with a field named `name` but instead got...
+
+<!-- > -- Elm Compiler -->
+
+<!-- - No dopamine! ☹️ -->
 
 ^ Validate assumptions immediately 👍
 Represent uncertainty 👍
 Still, assumptions!
+
+^ Feedback from wiring tests, manual inspection
+Deeply run with permutations
 
 # Validate Assumptions
 
@@ -163,7 +155,9 @@ But with more guarantees
 
 # GraphQL
 
-- GraphQL provides strong guarantees, and a robust type system.
+- Strong guarantees
+- Check contract at the gate
+- Robust type system
 
 # GraphQL Objects
 
@@ -199,8 +193,14 @@ Runtime error for mutually exclusive options
 
 # `dillonkearns/elm-graphql`
 
-- Generates a hardcoded library for your API!
-- Uses `Json.Decode` library as byte-code, so you can only represent getting data that is 1) known to exist, and 2) will be correctly decoded
+- Generates a "hardcoded library"
+- `Json.Decode` is an implementation detail
+
+# `dillonkearns/elm-graphql` Guarantees
+
+- Correct request
+- Well-typed
+- Decodes correctly
 
 # `Json.Decode.Pipeline`
 
@@ -218,6 +218,8 @@ userDecoder =
     |> optional "createdAt" dateTimeDecoder
 ```
 
+^ Looks similar to `Json.Decode.Pipeline`
+
 # `dillonkearns/elm-graphql`
 
 ```elm
@@ -234,6 +236,10 @@ userSelection =
     |> with Github.Object.User.createdAt
 ```
 
+# Demo!
+
+![original 70%](./img/elm-graphql.png)
+
 # -
 
 ![](./img/api/6.jpg)
@@ -241,10 +247,6 @@ userSelection =
 # -
 
 ![](./img/api/7.jpg)
-
-# Demo!
-
-![original 70%](./img/elm-graphql.png)
 
 # -
 
@@ -293,12 +295,13 @@ Why not PureScript, ReasonML, etc.?
 
 ![](./img/interop/8.jpg)
 
-# Installing Type Definitions `@types/...`
+# `npm install @types/<npm-library>`
 
-- Show the generated code to demystify the process.
-- Show that it knows the lookup results in `null | string`... it will be happy if we wrap it in an if. And then we can send it to the appropriate port.
+- Often comes included (`electron`, `moment`, etc.)
 
-# Wrapping `LocalStorage`
+^ Show `moment`'s' `.d.ts` file.
+^ Show generated code
+Show that it knows the lookup results in `null | string`... it will be happy if we wrap it in an if. And then we can send it to the appropriate port.
 
 # `elm-typescript-interop`
 
