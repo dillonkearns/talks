@@ -285,6 +285,8 @@ userSelection =
     |> with Github.Object.User.createdAt
 ```
 
+^ Defines a request.
+
 # Demo!
 
 ![original 70%](./img/elm-graphql.png)
