@@ -370,6 +370,14 @@ Show that it knows the lookup results in `null | string`... it will be happy if 
 
 ![](./img/dopamine6.jpg)
 
+# -
+
+![inline 120% original](./img/knowledge-timeline1.jpg)
+
+# -
+
+![inline 120% original](./img/compile-fix.jpg)
+
 # Variable Contracts
 
 - API responses
@@ -405,7 +413,6 @@ Can't always, contracts vary.
 - Code generation libraries and blog posts
 - AST with types & imports resolved
 - `elm-electron` improvements
-- Type-safe storage
 - Your ideas!
 
 # [Evergreen Elm](https://www.youtube.com/watch?v=4T6nZffnfzg)
