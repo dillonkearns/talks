@@ -132,6 +132,7 @@ Deeply run with permutations
 
 ^ Still run
 But with more guarantees
+Single source of truth
 
 # -
 
