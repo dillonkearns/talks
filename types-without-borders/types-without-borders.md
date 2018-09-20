@@ -55,7 +55,7 @@ update msg model =
 
 # -
 
-![](./img/dopamine.jpeg)
+![original](./img/dopamine1.jpg)
 
 # TODO
 
@@ -109,16 +109,16 @@ No guarantees.
 
 # Expecting an object with a field named `name` but instead got...
 
-<!-- > -- Elm Compiler -->
-
-<!-- - No dopamine! ☹️ -->
-
 ^ Validate assumptions immediately 👍
 Represent uncertainty 👍
 Still, assumptions!
 
 ^ Feedback from wiring tests, manual inspection
 Deeply run with permutations
+
+# -
+
+![](./img/sad1.jpg)
 
 # Validate Assumptions
 
