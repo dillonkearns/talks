@@ -57,10 +57,6 @@ update msg model =
 
 ![original](./img/dopamine1.jpg)
 
-# TODO
-
-TODO Graphic with timeline of when you can know things, from compile-time to run-time to run with the right values/environment/global variables.
-
 # APIs in Elm
 
 ```elm
@@ -129,6 +125,16 @@ greet(jsonResponse.name);
 ^ Explicit is better.
 Still assumptions.
 
+# When Can I Know?
+
+![120% original](./img/knowledge-timeline1.jpg)
+
+# When Can I Know?
+
+![120% original](./img/knowledge-timeline2.jpg)
+
+^ Unchecked assumptions flow deep.
+
 # Validate Assumptions
 
 ![original](./img/run-fix.jpg)
@@ -141,7 +147,6 @@ Still assumptions.
 
 ^ Still run
 But with more guarantees
-Single source of truth
 
 # Single Source of Truth
 
@@ -157,6 +162,9 @@ update msg model =
 
     -- You forgot a case!
 ```
+
+^ Single source.
+Elm knows about it!
 
 # -
 
@@ -184,23 +192,39 @@ update msg model =
 - Check contract at the gate
 - Robust type system
 
+# Enums
+
+```haskell
+enum Episode {
+  NEWHOPE
+  EMPIRE
+  JEDI
+}
+```
+
 # GraphQL Objects
 
 ```haskell
 type Character {
   name: String!
+  friends: [Character!]!
   appearsIn: [Episode]!
 }
 ```
+
+^ Represent nullability.
+Enums
 
 # GraphQL Arguments
 
 ```haskell
 type Query {
-  hero(episode: Episode): Character
   character(id: ID!): Character
+  all: [Character!]!
 }
 ```
+
+^ May not find ID.
 
 # -
 
