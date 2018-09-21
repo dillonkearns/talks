@@ -380,22 +380,32 @@ Show that it knows the lookup results in `null | string`... it will be happy if 
 
 # Variable Contracts
 
-- API responses
-- Command-line interfaces
-- SQL database
+- APIs
+- SQL queries
 - Any user-defined contract
 
 ^ Encode contracts into libraries.
 Can't always, contracts vary.
 
-# Code Generation
+# #TypesWithoutBorders
 
+- Code generation isn't so scary
 - You already do it!
-- Not scary, just templating
-- Macros versus code generation
-  - Macros mutate the AST
-  - Makes it harder to trace what code is doing
-  - Code gen is just like a custom-tailored library for your domain!
+- Avoid brittle data sources
+- Community-backed standards over one-offs
+
+^ Don't get coupled to unreliable sources.
+
+# -
+
+## Macros
+
+- Change what syntax means
+- Harder to trace what code is doing
+
+## Code Generation
+
+- Custom-tailored library for your domain!
 - Use it as a last resort
 
 # Representing Contracts in Elm
