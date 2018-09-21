@@ -195,10 +195,9 @@ Elm knows about it!
 # Enums
 
 ```haskell
-enum Episode {
-  NEWHOPE
-  EMPIRE
-  JEDI
+enum SortOrder {
+  ASCENDING
+  DESCENDING
 }
 ```
 
@@ -207,13 +206,14 @@ enum Episode {
 ```haskell
 type Character {
   name: String!
+  id: ID!
+  homePlanet: String
+  avatarUrl!
   friends: [Character!]!
-  appearsIn: [Episode]!
 }
 ```
 
 ^ Represent nullability.
-Enums
 
 # GraphQL Arguments
 
@@ -228,9 +228,7 @@ type Query {
 
 # -
 
-Runtime error for mutually exclusive options
-
-![original fit](https://raw.githubusercontent.com/dillonkearns/graphqelm/master/assets/github-optional-arg-error.png)
+![original 140%](./img/graphql-graph2.jpg)
 
 # -
 
