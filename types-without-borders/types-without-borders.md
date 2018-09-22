@@ -20,17 +20,18 @@ let json = Json.parse(stringFromServer);
 
 # -
 
-![100%](./img/picard.jpg)
-
-^ Run app to know things?
-
-# -
-
 ![70%](./img/picard3.png)
 
 ^ Run app to know things?
 
-# Type-Safe Elm
+# Elm Compiler
+
+- Knows a lot!
+- "Nullable" when explicitly stated
+- Make impossible states impossible
+- If it compiles it works! ™
+
+# Custom `Msg` Types
 
 ```elm
 type Msg
@@ -43,7 +44,7 @@ update msg model =
       (model + 1, Cmd.none)
 ```
 
-# Add a Msg
+# Add to `Msg`
 
 ```elm
 type Msg
@@ -58,7 +59,7 @@ update msg model =
 
 - This `case` does not have branches for all possibilities...
 
-# Make it compile
+# Single Source of Truth
 
 ```elm
 type Msg
@@ -148,6 +149,51 @@ greet(jsonResponse.name);
 
 ^ Explicit is better.
 Still assumptions.
+
+# Two Kinds of Uncertainty
+
+# Necessary Uncertainty
+
+```elm, [.highlight: 1-4]
+type Error
+    = BadStatus (Response String)
+    | Timeout
+    | NetworkError
+    | BadUrl String
+    | BadPayload String (Response String)
+```
+
+^ Timeouts happen!
+Representing them is great!
+
+# Unnecessary Uncertainty
+
+```elm, [.highlight: 5]
+type Error
+    = BadStatus (Response String)
+    | Timeout
+    | NetworkError
+    | BadUrl String
+    | BadPayload String (Response String)
+```
+
+- Could make this impossible.
+
+^ Not talking about that!
+Let's focus on #TypesWithoutBorders
+
+# Unnecessary Uncertainty
+
+```elm, [.highlight: 6]
+type Error
+    = BadStatus (Response String)
+    | Timeout
+    | NetworkError
+    | BadUrl String
+    | BadPayload String (Response String)
+```
+
+^ Assumptions about the response.
 
 # When Can I Know?
 
