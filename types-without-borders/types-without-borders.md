@@ -9,6 +9,27 @@ build-lists: true
 
 ![original right](./img/idaho.jpg)
 
+# JS
+
+```javascript
+let json = Json.parse(stringFromServer);
+```
+
+- `Uncaught ReferenceError: Json is not defined`
+- Don't know until runtime.
+
+# -
+
+![100%](./img/picard.jpg)
+
+^ Run app to know things?
+
+# -
+
+![70%](./img/picard3.png)
+
+^ Run app to know things?
+
 # Type-Safe Elm
 
 ```elm
@@ -56,6 +77,9 @@ update msg model =
 # -
 
 ![original](./img/dopamine1.jpg)
+
+^ Like the compiler knows everything!
+`Msg` is "Single Source of Truth"
 
 # APIs in Elm
 
