@@ -150,7 +150,13 @@ greet(jsonResponse.name);
 ^ Explicit is better.
 Still assumptions.
 
-# Two Kinds of Uncertainty
+# Uncertainty
+
+- Two kinds:
+- Necessary
+- Unnecessary
+
+![left](./img/fry2.jpg)
 
 # Necessary Uncertainty
 
