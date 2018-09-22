@@ -312,7 +312,11 @@ type Query {
 
 # -
 
-![original 140%](./img/graphql-graph2.jpg)
+![original 140%](./img/graphql-graph1.jpg)
+
+# -
+
+![original 140%](./img/graphql-graph.jpg)
 
 # -
 
