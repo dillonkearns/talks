@@ -130,14 +130,12 @@ droidDecoder =
 More important:
 No guarantees.
 
-# Expecting an object with a field named `name` but instead got...
+# `BadPayload`
+
+Expecting an object with a field named `name` but instead got...
 
 ^ Validate assumptions immediately 👍
 Represent uncertainty 👍
-Still, assumptions!
-
-^ Feedback from wiring tests, manual inspection
-Deeply run with permutations
 
 # -
 
@@ -153,7 +151,7 @@ greet(jsonResponse.name);
 
 - `"Hello [object Object]!"`
 - Explicit assumptions are nice (e.g. `Result`)
-- No assumptions is best!
+- No assumptions is best
 
 ^ Explicit is better.
 Still assumptions.
@@ -173,8 +171,6 @@ type Error
     = BadStatus (Response String)
     | Timeout
     | NetworkError
-    | BadUrl String
-    | BadPayload String (Response String)
 ```
 
 ^ Timeouts happen!
@@ -188,7 +184,6 @@ type Error
     | Timeout
     | NetworkError
     | BadUrl String
-    | BadPayload String (Response String)
 ```
 
 - Could make this impossible.
@@ -221,7 +216,7 @@ type Error
 
 ^ Unchecked assumptions flow deep.
 
-# With Uncertainty
+# Avoidable Uncertainty
 
 ![original](./img/run-fix.jpg)
 
