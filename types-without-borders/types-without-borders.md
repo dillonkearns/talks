@@ -156,6 +156,17 @@ greet(jsonResponse.name);
 ^ Explicit is better.
 Still assumptions.
 
+# When Can I Know?
+
+![120% original](./img/knowledge-timeline1.jpg)
+
+# When Can I Know?
+
+![120% original](./img/knowledge-timeline2.jpg)
+
+^ Implicit assumptions flow deep.
+Get more compiler guarantees somehow...
+
 # Uncertainty
 
 - Two kinds:
@@ -173,8 +184,11 @@ type Error
     | NetworkError
 ```
 
-^ Timeouts happen!
-Representing them is great!
+- Can't guarantee WiFi
+- Representing unavoidable uncertainty 👍
+
+^ Can't guarantee wifi
+Representing unavoidable 👍
 
 # Avoidable Uncertainty
 
@@ -205,16 +219,6 @@ type Error
 - Two sources of truth
 
 ^ Assumptions about the response.
-
-# When Can I Know?
-
-![120% original](./img/knowledge-timeline1.jpg)
-
-# When Can I Know?
-
-![120% original](./img/knowledge-timeline2.jpg)
-
-^ Unchecked assumptions flow deep.
 
 # Avoidable Uncertainty
 
@@ -287,9 +291,8 @@ enum SortOrder {
 ```haskell
 type Character {
   name: String!
-  id: ID!
   homePlanet: String
-  avatarUrl!
+  avatarUrl: String!
   friends: [Character!]!
 }
 ```
@@ -408,11 +411,18 @@ userSelection =
 
 # TypeScript
 
-- Superset of JS
-- Can add types for npm packages
+- Superset of JavaScript
 - Editor integration, auto-complete
 - Union Types
 - Just add a `tsconfig.json`!
+
+# `npm install @types/<npm-library>`
+
+- Often comes included (`electron`, `moment`, etc.)
+
+^ Show `moment`'s' `.d.ts` file.
+^ Show generated code
+Show that it knows the lookup results in `null | string`... it will be happy if we wrap it in an if. And then we can send it to the appropriate port.
 
 # Why not PureScript, ReasonML, etc.?
 
@@ -430,14 +440,6 @@ userSelection =
 
 ![](./img/interop/7.jpg)
 
-# `npm install @types/<npm-library>`
-
-- Often comes included (`electron`, `moment`, etc.)
-
-^ Show `moment`'s' `.d.ts` file.
-^ Show generated code
-Show that it knows the lookup results in `null | string`... it will be happy if we wrap it in an if. And then we can send it to the appropriate port.
-
 # Demo!
 
 `elm-typescript-interop`
@@ -454,19 +456,11 @@ Show that it knows the lookup results in `null | string`... it will be happy if 
 
 ![](./img/dopamine6.jpg)
 
-# -
-
-![](./img/elm-electron1.jpg)
-
-# -
-
-![](./img/elm-electron2.jpg)
-
 # Let's Know Things Early!
 
 ![inline 130% original](./img/knowledge-timeline1.jpg)
 
-# Let's **Eliminate** Avoidable Uncertainty!
+# Let's Eliminate Avoidable Uncertainty!
 
 ![inline 130% original](./img/compile-fix.jpg)
 
@@ -480,6 +474,14 @@ Show that it knows the lookup results in `null | string`... it will be happy if 
 
 ^ Encode contracts into libraries.
 Can't always, contracts vary.
+
+# -
+
+![](./img/elm-electron1.jpg)
+
+# -
+
+![](./img/elm-electron2.jpg)
 
 # #TypesWithoutBorders
 
@@ -512,13 +514,6 @@ Can't always, contracts vary.
 * [Understanding Style](https://www.youtube.com/watch?v=NYb2GDWMIm0) - Matt Griffith
   (Building On Top of Low-Level, Weak Guarantee Contracts)
 
-# Future Ideas
-
-- Code generation libraries and blog posts
-- AST with types & imports resolved
-- `elm-electron` improvements
-- Your ideas!
-
 # [Evergreen Elm](https://www.youtube.com/watch?v=4T6nZffnfzg)
 
 ![original 50%](./img/evergreen-elm.png)
@@ -526,6 +521,11 @@ Can't always, contracts vary.
 ^ Storage
 Represent schema
 Way to migrate from previous schema.
+
+# Future Ideas
+
+- Code generation libraries and blog posts
+- Your ideas!
 
 # Thank You!
 
