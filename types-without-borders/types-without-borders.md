@@ -20,14 +20,14 @@ let json = Json.parse(stringFromServer);
 
 # -
 
-![70%](./img/picard3.png)
+![60%](./img/picard3.png)
 
 ^ Run app to know things?
+Lots of ways to improve.
 
 # Elm Compiler
 
 - Knows a lot!
-- "Nullable" when explicitly stated
 - Make impossible states impossible
 - If it compiles it works! ™
 
@@ -75,12 +75,16 @@ update msg model =
       (model - 1, Cmd.none)
 ```
 
+^ If it compiles it works.
+
 # -
 
-![original](./img/dopamine1.jpg)
+![130%](./img/happy-picard1.jpg)
 
-^ Like the compiler knows everything!
-`Msg` is "Single Source of Truth"
+<!-- ![original](./img/dopamine1.jpg) -->
+
+^ Compiler knows everything!
+Happy place!
 
 # APIs in Elm
 
@@ -137,7 +141,9 @@ Deeply run with permutations
 
 # -
 
-![](./img/sad1.jpg)
+![fit](./img/picardhd1.jpg)
+
+^ Thought we were past this...
 
 # Implicit Assumptions
 
@@ -198,6 +204,8 @@ type Error
     | BadUrl String
     | BadPayload String (Response String)
 ```
+
+- Two sources of truth
 
 ^ Assumptions about the response.
 
