@@ -152,6 +152,8 @@ greet(jsonResponse.name);
 ```
 
 - `"Hello [object Object]!"`
+- Explicit assumptions are nice (e.g. `Result`)
+- No assumptions is best!
 
 ^ Explicit is better.
 Still assumptions.
@@ -159,12 +161,12 @@ Still assumptions.
 # Uncertainty
 
 - Two kinds:
-- Necessary
-- Unnecessary
+- Unavoidable
+- Avoidable
 
 ![left](./img/fry2.jpg)
 
-# Necessary Uncertainty
+# Unavoidable Uncertainty
 
 ```elm, [.highlight: 1-4]
 type Error
@@ -178,7 +180,7 @@ type Error
 ^ Timeouts happen!
 Representing them is great!
 
-# Unnecessary Uncertainty
+# Avoidable Uncertainty
 
 ```elm, [.highlight: 5]
 type Error
@@ -194,7 +196,7 @@ type Error
 ^ Not talking about that!
 Let's focus on #TypesWithoutBorders
 
-# Unnecessary Uncertainty
+# Avoidable Uncertainty
 
 ```elm, [.highlight: 6]
 type Error
@@ -219,13 +221,13 @@ type Error
 
 ^ Unchecked assumptions flow deep.
 
-# Validate Assumptions
+# With Uncertainty
 
 ![original](./img/run-fix.jpg)
 
 ^ Not what we signed up for!
 
-# We Prefer Guarantees!
+# With Certainty
 
 ![original](./img/compile-fix.jpg)
 
@@ -411,14 +413,15 @@ userSelection =
 
 # TypeScript
 
-Why not PureScript, ReasonML, etc.?
-
-- Avoid double-interop
 - Superset of JS
 - Can add types for npm packages
 - Editor integration, auto-complete
 - Union Types
 - Just add a `tsconfig.json`!
+
+# Why not PureScript, ReasonML, etc.?
+
+- Avoid double-interop
 
 # -
 
@@ -464,13 +467,15 @@ Show that it knows the lookup results in `null | string`... it will be happy if 
 
 ![](./img/elm-electron2.jpg)
 
-# -
+# Let's Know Things Early!
 
-![inline 120% original](./img/knowledge-timeline1.jpg)
+![inline 130% original](./img/knowledge-timeline1.jpg)
 
-# -
+# Let's **Eliminate** Avoidable Uncertainty!
 
-![inline 120% original](./img/compile-fix.jpg)
+![inline 130% original](./img/compile-fix.jpg)
+
+^ Not just model it!
 
 # Variable Contracts
 
