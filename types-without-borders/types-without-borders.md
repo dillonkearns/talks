@@ -275,7 +275,7 @@ Elm knows about it!
 # GraphQL
 
 - Strong guarantees
-- Check contract at the gate
+- Enforces contract
 - Robust type system
 
 # Enums
@@ -470,7 +470,7 @@ Show that it knows the lookup results in `null | string`... it will be happy if 
 # Variable Contracts
 
 - APIs
-- SQL queries
+- Databases
 - Any user-defined contract
 
 ^ Encode contracts into libraries.
