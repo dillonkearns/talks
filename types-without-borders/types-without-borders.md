@@ -23,13 +23,14 @@ let json = Json.parse(stringFromServer);
 ![60%](./img/picard3.png)
 
 ^ Run app to know things?
-Lots of ways to improve.
 
 # Elm Compiler
 
 - Knows a lot!
 - Make impossible states impossible
 - If it compiles it works! ™
+
+^ Elm is one solution.
 
 # Custom `Msg` Types
 
@@ -492,18 +493,6 @@ Can't always, contracts vary.
 
 ^ Don't get coupled to unreliable sources.
 
-# -
-
-## Macros
-
-- Change what syntax means
-- Harder to trace what code is doing
-
-## Code Generation
-
-- Custom-tailored library for your domain!
-- Use it as a last resort
-
 # Representing Contracts in Elm
 
 - [Advanced Types posts](https://medium.com/@ckoster22/advanced-types-in-elm-opaque-types-ec5ec3b84ed2) - Charlie Koster
@@ -522,10 +511,17 @@ Can't always, contracts vary.
 Represent schema
 Way to migrate from previous schema.
 
-# Future Ideas
+# Sharing About Code Generation
 
-- Code generation libraries and blog posts
-- Your ideas!
+- Blog posts, talks
+- End-to-end testing techniques
+- Extract libraries
+
+# -
+
+## #TypesWithoutBorders
+
+## What are your ideas?
 
 # Thank You!
 
