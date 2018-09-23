@@ -523,6 +523,8 @@ Way to migrate from previous schema.
 
 ## What are your ideas?
 
+![](img/map.jpg)
+
 # Thank You!
 
 ### [github.com/**DillonKearns**](http://github.com/dillonkearns)
