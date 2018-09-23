@@ -82,8 +82,6 @@ update msg model =
 
 ![130%](./img/happy-picard1.jpg)
 
-<!-- ![original](./img/dopamine1.jpg) -->
-
 ^ Compiler knows everything!
 Happy place!
 
