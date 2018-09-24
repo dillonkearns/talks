@@ -566,9 +566,9 @@ Way to migrate from previous schema.
 
 # -
 
-## #TypesWithoutBorders
+## [fit] #TypesWithoutBorders
 
-## What are your ideas?
+## [fit] What are your ideas?
 
 ![](img/map.jpg)
 
