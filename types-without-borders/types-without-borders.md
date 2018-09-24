@@ -413,6 +413,26 @@ characterSelection =
 
 ![right  original 70%](./img/elm-graphql.png)
 
+# ![inline 3.1%](img/graphql.png) Breaking Change
+
+```haskell
+type Character {
+  name: String!
+  avatarUrl: String!
+  homePlanet: String
+}
+```
+
+# ![inline 3.1%](img/graphql.png) Breaking Change
+
+```haskell
+type Character {
+  name: String!
+  -- avatarUrl: String!
+  homePlanet: String
+}
+```
+
 # -
 
 ![](./img/api/6.jpg)
