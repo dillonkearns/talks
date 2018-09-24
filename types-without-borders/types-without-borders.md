@@ -491,6 +491,10 @@ Show that it knows the lookup results in `null | string`... it will be happy if 
 
 ![](./img/dopamine6.jpg)
 
+[.footer-style: #c0c0c0, alignment(right), text-scale(1.5), Avenir Next Regular]
+
+[.text-strong: #ffffff, text-scale(1.5), Avenir Next Regular]
+
 # Variable Contracts
 
 - APIs
