@@ -3,6 +3,10 @@ build-lists: true
 
 # Types Without Borders
 
+[.text: #0D70FB, alignment(left), line-height(10), text-scale(1.6), Avenir Next Regular]
+
+[.footer-style: #2f2f2f, alignment(left), line-height(8), text-scale(3), avenir next regular]
+
 ### [incrementalelm.com](http://incrementalelm.com)
 
 ![original right](./img/idaho.jpg)
@@ -521,7 +525,7 @@ Way to migrate from previous schema.
 
 # Thank You!
 
-### [github.com/**DillonKearns**](http://github.com/dillonkearns)
+[.text: #0D70FB, alignment(left), line-height(10), text-scale(1.6), Avenir Next Regular]
 
 ### [incrementalelm.com](http://incrementalelm.com)
 
