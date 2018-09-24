@@ -502,6 +502,7 @@ Show that it knows the lookup results in `null | string`... it will be happy if 
 - APIs
 - Databases/Storage ![70%](img/local-storage.png)
 - Message Passing ![inline 12%](img/electron.png) ![inline 40%](img/web-components.png)
+  <br />
 - Any user-defined contract
 
 ^ Remove avoidable uncertainty.
