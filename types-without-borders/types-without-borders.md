@@ -507,13 +507,13 @@ Way to migrate from previous schema.
 
 # Let's Eliminate Avoidable Uncertainty!
 
-![inline 130% original](./img/compile-fix.jpg)
+![inline 150% original](./img/compile-fix.jpg)
 
 ^ Not just model it!
 
-# Let's Know Things Early!
+# Let's Be Certain Early!
 
-![inline 130% original](./img/knowledge-timeline1.jpg)
+![inline original 110%](./img/know-things-earlier.jpg)
 
 # -
 
@@ -530,11 +530,3 @@ Way to migrate from previous schema.
 [.text: #0D70FB, Avenir Next Regular]
 
 ![fit](img/thank-you.jpg)
-
-# Thank You!
-
-[.text: #0D70FB, alignment(left), line-height(10), text-scale(1.6), Avenir Next Regular]
-
-### [incrementalelm.com](http://incrementalelm.com)
-
-![right](./img/idaho.jpg)
