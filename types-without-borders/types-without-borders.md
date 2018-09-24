@@ -1,9 +1,7 @@
-footer: [github.com/**DillonKearns**/talks](http://github.com/dillonkearns/talks) @dillontkearns
+footer: bit.ly/**typeswithoutborders**
 build-lists: true
 
 # Types Without Borders
-
-### [github.com/**DillonKearns**](http://github.com/dillonkearns)
 
 ### [incrementalelm.com](http://incrementalelm.com)
 
@@ -475,7 +473,10 @@ Can't always, contracts vary.
 
 # Representing Contracts in Elm
 
+[.build-lists: false]
+
 - [Advanced Types posts](https://medium.com/@ckoster22/advanced-types-in-elm-opaque-types-ec5ec3b84ed2) - Charlie Koster
+  (Opaque Types, Phantom Types)
 - [Making Impossible States Impossible](https://www.youtube.com/watch?v=IcgmSRJHu_8) - Richard
 - [Make Data Structures](https://www.youtube.com/watch?v=x1FU3e0sT1I&list=PL-cYi7I913S-VgTSUKWhrUkReM_vMNQxG&index=11) - Richard
 - [Scaling Elm Apps](https://www.youtube.com/watch?v=DoA4Txr4GUs) - Richard
