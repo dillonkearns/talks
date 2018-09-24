@@ -424,7 +424,7 @@ characterSelection =
 
 ![](./img/interop/5.jpg)
 
-# TypeScript
+# ![inline 8%](img/ts.png) TypeScript
 
 - Superset of JavaScript
 - Editor integration, auto-complete
@@ -433,7 +433,7 @@ characterSelection =
 
 # `npm install @types/<npm-library>`
 
-- Often comes included (`electron`, `moment`, etc.)
+- Often included (`electron`, `moment`)
 
 ^ Show `moment`'s' `.d.ts` file.
 ^ Show generated code
