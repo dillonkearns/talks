@@ -455,37 +455,19 @@ Show that it knows the lookup results in `null | string`... it will be happy if 
 
 ![](./img/dopamine6.jpg)
 
-# Let's Know Things Early!
-
-![inline 130% original](./img/knowledge-timeline1.jpg)
-
-# Let's Eliminate Avoidable Uncertainty!
-
-![inline 130% original](./img/compile-fix.jpg)
-
-^ Not just model it!
-
 # Variable Contracts
 
 - APIs
 - Databases
+- Message-passing protocols
 - Any user-defined contract
 
 ^ Encode contracts into libraries.
 Can't always, contracts vary.
 
-# -
-
-![](./img/elm-electron1.jpg)
-
-# -
-
-![](./img/elm-electron2.jpg)
-
 # #TypesWithoutBorders
 
-- Code generation isn't so scary
-- You already do it!
+- Code generation is more tedious than difficult
 - Avoid brittle data sources
 - Community-backed standards over one-offs
 
@@ -497,9 +479,7 @@ Can't always, contracts vary.
 - [Making Impossible States Impossible](https://www.youtube.com/watch?v=IcgmSRJHu_8) - Richard
 - [Make Data Structures](https://www.youtube.com/watch?v=x1FU3e0sT1I&list=PL-cYi7I913S-VgTSUKWhrUkReM_vMNQxG&index=11) - Richard
 - [Scaling Elm Apps](https://www.youtube.com/watch?v=DoA4Txr4GUs) - Richard
-
-* [Understanding Style](https://www.youtube.com/watch?v=NYb2GDWMIm0) - Matt Griffith
-  (Building On Top of Low-Level, Weak Guarantee Contracts)
+- [Understanding Style](https://www.youtube.com/watch?v=NYb2GDWMIm0) - Matt Griffith
 
 # [Evergreen Elm](https://www.youtube.com/watch?v=4T6nZffnfzg)
 
@@ -514,6 +494,16 @@ Way to migrate from previous schema.
 - Blog posts, talks
 - End-to-end testing techniques
 - Extract libraries
+
+# Let's Eliminate Avoidable Uncertainty!
+
+![inline 130% original](./img/compile-fix.jpg)
+
+^ Not just model it!
+
+# Let's Know Things Early!
+
+![inline 130% original](./img/knowledge-timeline1.jpg)
 
 # -
 
