@@ -378,7 +378,7 @@ type alias CharacterInfo =
   }
 
 characterSelection =
-  Character.selection User
+  Character.selection CharacterInfo
     |> with Character.name
     |> with Character.avatarUrl
     |> with Character.homePlanet
