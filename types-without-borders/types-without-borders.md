@@ -3,9 +3,7 @@ build-lists: true
 
 #
 
-[.text-strong: #0089FC, Avenir Next Regular]
-
-[.text: #0D70FB, Avenir Next Regular]
+[.hide-footer]
 
 ![fit](img/opening.jpg)
 
@@ -525,8 +523,6 @@ Way to migrate from previous schema.
 
 # -
 
-[.text-strong: #0089FC, Avenir Next Regular]
-
-[.text: #0D70FB, Avenir Next Regular]
+[.hide-footer]
 
 ![fit](img/thank-you.jpg)
