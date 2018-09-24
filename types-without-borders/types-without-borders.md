@@ -178,11 +178,15 @@ Get more compiler guarantees somehow...
 
 # [fit] Uncertainty
 
+[.footer-style: alignment(right), text-scale(1.5), Avenir Next Regular]
+
 <br />
 
 ![left](./img/fry2.jpg)
 
 # [fit] Uncertainty
+
+[.footer-style: alignment(right), text-scale(1.5), Avenir Next Regular]
 
 <br />
 
@@ -191,6 +195,8 @@ Get more compiler guarantees somehow...
 ![left](./img/fry2.jpg)
 
 # [fit] Uncertainty
+
+[.footer-style: alignment(right), text-scale(1.5), Avenir Next Regular]
 
 <br />
 
