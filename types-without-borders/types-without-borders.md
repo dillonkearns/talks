@@ -476,7 +476,7 @@ Show that it knows the lookup results in `null | string`... it will be happy if 
 # Variable Contracts
 
 - APIs
-- Databases
+- Databases/Storage
 - Message-passing protocols
 - Any user-defined contract
 
@@ -526,6 +526,10 @@ Way to migrate from previous schema.
 ![inline 150% original](./img/compile-fix.jpg)
 
 ^ Not just model it!
+
+# Let's Be Certain Early!
+
+![inline original 110%](./img/know-things-earlier1.jpg)
 
 # Let's Be Certain Early!
 
