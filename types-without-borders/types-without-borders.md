@@ -339,17 +339,17 @@ type Query {
 # `Json.Decode.Pipeline`
 
 ```elm
-type alias User =
-  { username : String
-  , name : Maybe String
-  , createdAt : Time.Posix
+type alias CharacterInfo =
+  { name : String
+  , avatarUrl : String
+  , homePlanet : Maybe String
   }
 
-userDecoder =
-  Decode.succeed User
-    |> required "login" string
-    |> required "name" (nullable string)
-    |> optional "createdAt" dateTimeDecoder
+characterDecoder =
+  Decode.succeed CharacterInfo
+    |> required "name" string
+    |> required "avatarUrl" string
+    |> optional "homePlanet" (nullable string)
 ```
 
 ^ Looks similar to `Json.Decode.Pipeline`
@@ -357,17 +357,17 @@ userDecoder =
 # `dillonkearns/elm-graphql`
 
 ```elm
-type alias User =
-  { username : String
-  , name : Maybe String
-  , createdAt : Time.Posix
+type alias CharacterInfo =
+  { name : String
+  , avatarUrl : String
+  , homePlanet : Maybe String
   }
 
-userSelection =
-  GithubUser.selection User
-    |> with GithubUser.login
-    |> with GithubUser.name
-    |> with (GithubUser.createdAt |> mapToPosix)
+characterSelection =
+  Character.selection User
+    |> with Character.name
+    |> with Character.avatarUrl
+    |> with Character.homePlanet
 ```
 
 ^ Defines a request.
