@@ -7,7 +7,7 @@ build-lists: true
 
 ![fit](img/opening.jpg)
 
-# JS
+# ![inline](img/js.jpg) JavaScript
 
 ```javascript
 let json = Json.parse(stringFromServer);
@@ -22,7 +22,7 @@ let json = Json.parse(stringFromServer);
 
 ^ Run app to know things?
 
-# Elm Compiler
+# ![inline](img/elm.png) Elm Compiler
 
 - Knows a lot!
 - Make impossible states impossible
@@ -30,7 +30,7 @@ let json = Json.parse(stringFromServer);
 
 ^ Elm is one solution.
 
-# Custom `Msg` Types
+# ![inline](img/elm.png) Custom `Msg` Types
 
 ```elm
 type Msg
@@ -43,7 +43,7 @@ update msg model =
       (model + 1, Cmd.none)
 ```
 
-# Add to `Msg`
+# ![inline](img/elm.png) Add to `Msg`
 
 ```elm
 type Msg
@@ -58,7 +58,7 @@ update msg model =
 
 - This `case` does not have branches for all possibilities...
 
-# Single Source of Truth
+# ![inline](img/elm.png) Single Source of Truth
 
 ```elm
 type Msg
@@ -83,7 +83,7 @@ update msg model =
 ^ Compiler knows everything!
 Happy place!
 
-# APIs in Elm
+# ![inline](img/elm.png) APIs in Elm
 
 ```elm
 type Character
@@ -104,7 +104,7 @@ decoder =
 ^ Check assumptions at gate.
 Still, duplicate contract.
 
-# Nested Decoders
+# ![inline](img/elm.png) Nested Decoders
 
 ```elm
 humanDecoder : Decode.Decoder Character
@@ -140,7 +140,7 @@ Represent uncertainty 👍
 
 ^ Thought we were past this...
 
-# Implicit Assumptions
+# ![inline](img/js.jpg) Implicit Assumptions
 
 ```javascript
 greet(jsonResponse.name);
