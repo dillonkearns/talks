@@ -136,7 +136,7 @@ Represent uncertainty 👍
 
 # -
 
-![fit](./img/picardhd1.jpg)
+![50%](./img/picardhd1.jpg)
 
 ^ Thought we were past this...
 
@@ -495,6 +495,11 @@ Way to migrate from previous schema.
 - Blog posts, talks
 - End-to-end testing techniques
 - Extract libraries
+
+# -
+
+[.background-color: #000000]
+![fit](img/skeptical.jpg)
 
 # Let's Eliminate Avoidable Uncertainty!
 
