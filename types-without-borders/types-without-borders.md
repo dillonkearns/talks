@@ -1,5 +1,6 @@
 footer: bit.ly/**typeswithoutborders**
 build-lists: true
+slide-dividers: #
 
 #
 
