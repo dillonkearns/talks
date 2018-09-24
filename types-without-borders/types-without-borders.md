@@ -457,7 +457,9 @@ Show that it knows the lookup results in `null | string`... it will be happy if 
 
 # Demo!
 
-`elm-typescript-interop`
+## `elm-typescript-interop`
+
+![inline original 120%](./img/interop/6.jpg)
 
 # -
 
