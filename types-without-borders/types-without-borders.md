@@ -164,13 +164,27 @@ Still assumptions.
 ^ Implicit assumptions flow deep.
 Get more compiler guarantees somehow...
 
-# Uncertainty
+# [fit] Uncertainty
 
-[.autoscale: true]
+<br />
 
-- Two kinds:
-- Unavoidable
-- Avoidable
+![left](./img/fry2.jpg)
+
+# [fit] Uncertainty
+
+<br />
+
+### [fit] 1. Unavoidable
+
+![left](./img/fry2.jpg)
+
+# [fit] Uncertainty
+
+<br />
+
+### [fit] 1. Unavoidable
+
+### [fit] 2. Avoidable
 
 ![left](./img/fry2.jpg)
 
