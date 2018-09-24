@@ -284,7 +284,7 @@ Elm knows about it!
 
 ![](./img/api/5.jpg)
 
-# GraphQL
+# ![inline 3.1%](img/graphql.png) GraphQL
 
 - Strong guarantees
 - Enforces contract
