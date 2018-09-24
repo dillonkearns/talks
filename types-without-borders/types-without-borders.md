@@ -139,12 +139,14 @@ droidDecoder =
 More important:
 No guarantees.
 
-# `BadPayload`
+# ![](img/error.png) `BadPayload`
 
-Expecting an object with a field named `name` but instead got...
+## [fit] Expecting an object with a field named `name` but instead got...
 
 ^ Validate assumptions immediately 👍
 Represent uncertainty 👍
+
+<!-- [.text: #FF2600, text-scale(1.5), Avenir Next Regular] -->
 
 # -
 
@@ -215,7 +217,7 @@ type Error
     | NetworkError
 ```
 
-- Can't guarantee WiFi
+- Can't guarantee WiFi ![](img/wifi.png)
 - Representing unavoidable uncertainty 👍
 
 ^ Can't guarantee wifi
