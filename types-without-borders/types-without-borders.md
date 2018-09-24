@@ -282,7 +282,7 @@ update msg model =
 ```
 
 ^ Single source.
-Elm knows about it!
+Certainty!
 
 # -
 
@@ -310,7 +310,7 @@ Elm knows about it!
 - Enforces contract
 - Robust type system
 
-# Enums
+# ![inline 3.1%](img/graphql.png) GraphQL Enums
 
 ```haskell
 enum SortOrder {
@@ -319,7 +319,7 @@ enum SortOrder {
 }
 ```
 
-# GraphQL Objects
+# ![inline 3.1%](img/graphql.png) GraphQL Objects
 
 ```haskell
 type Character {
@@ -332,7 +332,7 @@ type Character {
 
 ^ Represent nullability.
 
-# GraphQL Arguments
+# ![inline 3.1%](img/graphql.png) GraphQL Arguments
 
 ```haskell
 type Query {
@@ -459,9 +459,13 @@ characterSelection =
 ^ Show generated code
 Show that it knows the lookup results in `null | string`... it will be happy if we wrap it in an if. And then we can send it to the appropriate port.
 
-# Why not PureScript, ReasonML, etc.?
+# Why Not Functional Compile-to-JS?
+
+![inline 30%](img/reason.png) ![inline 25%](img/purescript.png)
 
 - Avoid double-interop
+
+![right](img/js-background.jpg)
 
 # -
 
