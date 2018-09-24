@@ -1,15 +1,13 @@
 footer: bit.ly/**typeswithoutborders**
 build-lists: true
 
-# Types Without Borders
+#
 
-[.text: #0D70FB, alignment(left), line-height(10), text-scale(1.6), Avenir Next Regular]
+[.text-strong: #0089FC, Avenir Next Regular]
 
-[.footer-style: #2f2f2f, alignment(left), line-height(8), text-scale(3), avenir next regular]
+[.text: #0D70FB, Avenir Next Regular]
 
-### [incrementalelm.com](http://incrementalelm.com)
-
-![original right](./img/idaho.jpg)
+![fit](img/opening.jpg)
 
 # JS
 
@@ -169,6 +167,8 @@ Still assumptions.
 Get more compiler guarantees somehow...
 
 # Uncertainty
+
+[.autoscale: true]
 
 - Two kinds:
 - Unavoidable
@@ -522,6 +522,14 @@ Way to migrate from previous schema.
 ## What are your ideas?
 
 ![](img/map.jpg)
+
+# -
+
+[.text-strong: #0089FC, Avenir Next Regular]
+
+[.text: #0D70FB, Avenir Next Regular]
+
+![fit](img/thank-you.jpg)
 
 # Thank You!
 
