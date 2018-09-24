@@ -85,6 +85,18 @@ Happy place!
 
 # ![inline](img/elm.png) APIs in Elm
 
+[.code-highlight: 1-3]
+
+[.code-highlight: 1-5]
+
+[.code-highlight: 1-7]
+
+[.code-highlight: 1-9]
+
+[.code-highlight: 1-12]
+
+[.code-highlight: 1-13]
+
 ```elm
 type Character
     = Human { name : String, homePlanet : String }
