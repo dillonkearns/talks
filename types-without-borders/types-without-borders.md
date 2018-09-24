@@ -388,7 +388,9 @@ characterSelection =
 
 # Demo!
 
-![original 70%](./img/elm-graphql.png)
+## [fit] `dillonkearns/elm-graphql`
+
+![right  original 70%](./img/elm-graphql.png)
 
 # -
 
