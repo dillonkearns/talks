@@ -14,8 +14,13 @@ slide-dividers: #
 let json = Json.parse(stringFromServer);
 ```
 
-- `Uncaught ReferenceError: Json is not defined`
+- _`Json is not defined`_
+
 - Don't know until runtime.
+
+[.text-emphasis: #FF4909, text-scale(1.6), Avenir Next Regular]
+
+[.text-strong: #0096FF, text-scale(1.5), Avenir Next Regular]
 
 # -
 
