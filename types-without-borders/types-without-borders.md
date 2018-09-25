@@ -532,21 +532,20 @@ Show that it knows the lookup results in `null | string`... it will be happy if 
 
 ^ Remove avoidable uncertainty.
 
-# [Evergreen Elm](https://www.youtube.com/watch?v=4T6nZffnfzg)
+# -
 
-![original 50%](./img/evergreen-elm.png)
+![original 70%](./img/evergreen-elm.png)
 
 ^ Storage
 Represent schema
 Way to migrate from previous schema.
 
-# #TypesWithoutBorders
+# Sharing About Code Generation
 
 - Code generation is more tedious than difficult
-- Avoid brittle data sources
-- Community-backed standards over one-offs
-
-^ Don't get coupled to unreliable sources.
+- Blog posts, talks
+- End-to-end testing techniques
+- Extract libraries
 
 # Representing Contracts in Elm
 
@@ -558,12 +557,6 @@ Way to migrate from previous schema.
 - [Make Data Structures](https://www.youtube.com/watch?v=x1FU3e0sT1I&list=PL-cYi7I913S-VgTSUKWhrUkReM_vMNQxG&index=11) - Richard
 - [Scaling Elm Apps](https://www.youtube.com/watch?v=DoA4Txr4GUs) - Richard
 - [Understanding Style](https://www.youtube.com/watch?v=NYb2GDWMIm0) - Matt Griffith
-
-# Sharing About Code Generation
-
-- Blog posts, talks
-- End-to-end testing techniques
-- Extract libraries
 
 # -
 
