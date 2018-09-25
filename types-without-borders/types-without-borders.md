@@ -389,7 +389,7 @@ characterDecoder =
   Decode.succeed CharacterInfo
     |> required "name" string
     |> required "avatarUrl" string
-    |> optional "homePlanet" (nullable string)
+    |> required "homePlanet" (nullable string)
 ```
 
 ^ Looks similar to `Json.Decode.Pipeline`
