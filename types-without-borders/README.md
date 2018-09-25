@@ -14,6 +14,8 @@ Twitter: [@dillontkearns](https://twitter.com/dillontkearns)
 - Type-Safe JavaScript Interop - [`dillonkearns/elm-typescript-interop`](https://github.com/dillonkearns/elm-typescript-interop) (see the [`elm-typescript-starter`](https://github.com/dillonkearns/elm-typescript-starter) which uses `elm-typescript-interop`).
 - Type-Safe Electron - [`dillonkearns/elm-electron`](https://github.com/dillonkearns/elm-electron)
 
+[This is a great intro to GraphQL](https://graphql.org/learn/).
+
 ## Representing Contracts in Elm
 
 When you're representing an external system's contract within Elm's type system

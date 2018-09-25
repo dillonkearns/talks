@@ -256,7 +256,7 @@ type Error
 
 # Avoidable Uncertainty
 
-![original](./img/run-fix.jpg)
+![original](./img/run-fix2.jpg)
 
 ^ Not what we signed up for!
 
@@ -531,6 +531,26 @@ Show that it knows the lookup results in `null | string`... it will be happy if 
 - Any user-defined contract
 
 ^ Remove avoidable uncertainty.
+
+# -
+
+![fit](img/typed-local-storage1.jpg)
+
+# -
+
+![fit](img/typed-local-storage2.jpg)
+
+# -
+
+![fit](img/typed-local-storage3.jpg)
+
+# -
+
+![fit](img/typed-local-storage4.jpg)
+
+# -
+
+![fit](img/typed-local-storage5.jpg)
 
 # -
 
