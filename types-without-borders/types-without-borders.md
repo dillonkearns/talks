@@ -601,9 +601,15 @@ Way to migrate from previous schema.
 
 ## [fit] #TypesWithoutBorders
 
-## [fit] What are your ideas?
+What are your ideas?
 
 ![](img/map.jpg)
+
+[.text: #FF2600, text-scale(2), Avenir Next Regular]
+
+[.header: #0a0a0a, text-scale(1.5), Fira Sans Bold]
+
+[.footer-style: alignment(right), text-scale(1.5), Avenir Next Regular]
 
 # -
 
