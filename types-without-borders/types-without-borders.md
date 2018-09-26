@@ -151,11 +151,6 @@ No guarantees.
 
 ## [fit] Expecting an object with a field named `name` but instead got...
 
-^ Validate assumptions immediately 👍
-Represent uncertainty 👍
-
-<!-- [.text: #FF2600, text-scale(1.5), Avenir Next Regular] -->
-
 # -
 
 ![50%](./img/picardhd1.jpg)
