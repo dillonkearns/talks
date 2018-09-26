@@ -1,6 +1,10 @@
 # Types Without Borders Resources
 
+## [Download Slides](https://github.com/dillonkearns/talks/raw/master/types-without-borders/types-without-borders.pdf)
+
 ## Contact Info
+
+http://incrementalelm.com
 
 Email: [info@incrementalelm.com](http://incrementalelm.com)
 
