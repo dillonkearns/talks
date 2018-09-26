@@ -16,6 +16,8 @@ let json = Json.parse(stringFromServer);
 
 - _`Json is not defined`_
 
+- We meant `JSON`
+
 - Don't know until runtime.
 
 [.text-emphasis: #FF4909, text-scale(1.6), Avenir Next Regular]
@@ -86,7 +88,7 @@ update msg model =
 
 ![130%](./img/happy-picard1.jpg)
 
-^ Compiler knows everything!
+^ Certainty!
 Happy place!
 
 # ![inline](img/elm.png) APIs in Elm
