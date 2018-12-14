@@ -227,7 +227,7 @@ JavaScript
 
 ---
 
-![fit](/Users/dillon/Downloads/Remote Data Truth Table - Sheet1 \(1\).pdf)
+![fit](img/remote-data-truth-table.png)
 
 ---
 
