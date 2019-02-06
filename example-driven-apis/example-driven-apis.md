@@ -53,9 +53,9 @@ slide-dividers: #
 
 ^ I ended up just using a regular Http request. I could easily copy-paste a query that I knew worked.
 
-# Today
+# Intro to `elm-graphql`
 
-```javascript
+```elm
 query {
   human(id: "1001") {
     name
@@ -64,7 +64,26 @@ query {
 }
 ```
 
+#### [`Run query`]((http://elm-graphql.herokuapp.com/?query=query%20%7B%0A%20%20human(id%3A%20%221001%22\)%7B%0A%20%20%20%20name%0A%20%20%20%20homePlanet%0A%20%20%7D%0A%7D%0A)
+
 # Intro to `elm-graphql`
+
+```elm
+query : SelectionSet (Maybe Human) RootQuery
+query =
+    Query.human { id = Id "1001" } humanSelection
+
+type alias Human =
+    { name : String
+    , homePlanet : Maybe String
+    }
+
+humanSelection : SelectionSet Human StarWars.Object.Human
+humanSelection =
+    SelectionSet.map2 Human
+        Human.name
+        Human.homePlanet
+```
 
 # [Day 1](https://github.com/dillonkearns/elm-graphql/blob/56495760aabc7dd4944cfaebe998271b38eaca66/tests/Tests.elm)
 
