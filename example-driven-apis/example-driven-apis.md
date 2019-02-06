@@ -39,9 +39,9 @@ slide-dividers: #
 }
 ```
 
-# Well, Kind Of
+# [Tried using a client](https://github.com/dillonkearns/mobster/blob/2ad66f514579a09a9679b75b6c1b2956e7879b46/web/src/GithubGraphql.elm)
 
-- [Tried using a client](https://github.com/dillonkearns/mobster/blob/2ad66f514579a09a9679b75b6c1b2956e7879b46/web/src/GithubGraphql.elm)
+- Abandoned the attempt
 - Too many domain concepts:
 
   ```elm
@@ -52,26 +52,33 @@ slide-dividers: #
 - Ended up using a [plain HTTP Request & JSON Decoder](https://github.com/dillonkearns/mobster/blob/2ad66f514579a09a9679b75b6c1b2956e7879b46/web/src/Github.elm)
 
 ^ - Needed to run, check, run, check.
-^ I ended up just using a regular Http request. I could easily copy-paste a query that I knew worked.
 
-# Landscape of Clients
+^ - Used regular Http request
 
-- GraphQL Query => Elm (for old Elm version).
-- Manually define Json Decoders => GraphQL Query & Json Decoder
-- GraphQL Schema => Elm API -- my vision
+^ - Copy-paste query that I knew worked
 
-# The Vision
+# Initial Vision
 
 - Typed responses
 - Impossible to write an incorrect query
-- Started with my itch
 
-^ Wanted guardrails
+^ - Started with my itch
+
+^ - Wanted guardrails
+
+# Landscape of Clients
+
+- `gql` => Elm
+  - No Elm 0.18 support
+- Build up Json Decoders and `gql` query together
+  - Manual process, error-prone
+- GraphQL Schema => Elm API
+  - My hypothesis
 
 # The Refined Vision
 
 - Elm gives me clear feedback
-- Elm code is 1st class (not `gql` queries)
+- Elm (not `gql`) is 1st-class
 - Meaningful data structures
 
 ^ - Didn't even know if it was possible
