@@ -51,7 +51,43 @@ slide-dividers: #
 - No guardrails
 - Ended up using a [plain HTTP Request & JSON Decoder](https://github.com/dillonkearns/mobster/blob/2ad66f514579a09a9679b75b6c1b2956e7879b46/web/src/Github.elm)
 
+^ - Needed to run, check, run, check.
 ^ I ended up just using a regular Http request. I could easily copy-paste a query that I knew worked.
+
+# Landscape of Clients
+
+- GraphQL Query => Elm (for old Elm version).
+- Manually define Json Decoders => GraphQL Query & Json Decoder
+- GraphQL Schema => Elm API -- my vision
+
+# The Vision
+
+- Typed responses
+- Impossible to write an incorrect query
+- Started with my itch
+
+^ Wanted guardrails
+
+# The Refined Vision
+
+- Elm gives me clear feedback
+- Elm code is 1st class (not `gql` queries)
+- Meaningful data structures
+
+^ - Didn't even know if it was possible
+^ - Picked a clear strategy with confidence.
+
+^ - I don't want to accept auto-generated data structures as the way to structure my data. I want to choose exactly which data structures I want, and never have the intermediary data structures exist anywhere in my app (immediately map/transform them)
+
+^ - Queries aren't the first-class citizen
+^ - CODE is!
+^ - Code changes, code is reused, code is refactored.
+
+# Lesson
+
+- Start with a hypothesis
+- Clear, focused vision
+- It can change over time, but it should always be narrow and clearly defined
 
 # Intro to `elm-graphql`
 
