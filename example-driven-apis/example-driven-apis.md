@@ -8,6 +8,14 @@ slide-dividers: #
 
 ![fit](img/opening.jpg)
 
+# Lessons
+
+- Vision-First
+  - Clear, Focused, & Explicit
+- Example-First
+- Solve real problems (User Feedback)
+- End-To-End Testing => Fast & Safe Iteration
+
 # The Timeline
 
 - How Do I GraphQL in Elm? 🤷
@@ -19,14 +27,6 @@ slide-dividers: #
 - Exhaustive types
 - Polymorphic fragment is just a field
 - Eliminate `Field`s
-
-# Lessons
-
-- Vision-First
-  - Clear, Focused, & Explicit
-- Example-First
-- Solve real problems (User Feedback)
-- End-To-End Testing => Fast & Safe Iteration
 
 # The Problem
 
