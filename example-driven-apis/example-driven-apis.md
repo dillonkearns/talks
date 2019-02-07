@@ -185,11 +185,10 @@ test "decodes properly" <| \() ->
 
 # Examples Versus Tests
 
-- [Introducing Phantom Types](https://github.com/dillonkearns/elm-graphql/commit/c3d1cda62adbabb7fae9fc5535c28a9052cca989#diff-2d5fe20321b71db836c3b16a8828d630)
 - Unit tests at first
 - Still meaningful from the start
-
-- Evaluate the design
+- [Evolved to examples folder (which _is_ the approval test suite)](https://github.com/dillonkearns/elm-graphql/commit/c3d1cda62adbabb7fae9fc5535c28a9052cca989#diff-2d5fe20321b71db836c3b16a8828d630)
+- Evaluate the design with zero friction
 - [Upgrade guide is free!](https://github.com/dillonkearns/elm-graphql/blob/master/CHANGELOG-ELM-PACKAGE.md#150---2018-11-27)
 
 ^ - Avoid toy examples
