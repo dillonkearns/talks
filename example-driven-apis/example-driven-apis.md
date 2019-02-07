@@ -13,22 +13,25 @@ slide-dividers: #
 - Vision-First
   - Clear, Focused, & Explicit
 - Example-First
+  - Vision => Examples => Features
 - Solve real problems (User Feedback)
 - End-To-End Testing => Fast & Safe Iteration
 
+^ Vision informs examples informs features.
+
 # The Timeline
 
-- How Do I GraphQL in Elm? 🤷
-- Vision
-- Working Example (No Code Gen)
-- End-To-End Tests & Code Gen
-- Public Release
-- Hash-based aliases
-- Exhaustive types
-- Polymorphic fragment is just a field
-- Eliminate `Field`s
+1. How Do I GraphQL in Elm? 🤷
+1. Survey Tools
+1. Vision
+1. Working Example (No Code Gen)
+1. End-To-End Tests & Code Gen
+1. Hash-based aliases
+1. Eliminate `Field`s
 
-# The Problem
+^ TODO: include these topics? 1. Exhaustive types 1. Polymorphic fragment is just a field
+
+# 1. How Do I GraphQL in Elm? 🤷
 
 [Mobster download page](http://mobster.cc/)
 
@@ -69,7 +72,7 @@ query {
 }
 ```
 
-# [Tried using a client](https://github.com/dillonkearns/mobster/blob/2ad66f514579a09a9679b75b6c1b2956e7879b46/web/src/GithubGraphql.elm)
+# [Tried An Elm Client](https://github.com/dillonkearns/mobster/blob/2ad66f514579a09a9679b75b6c1b2956e7879b46/web/src/GithubGraphql.elm)
 
 - Abandoned the attempt
 - Too many domain concepts:
@@ -87,16 +90,7 @@ query {
 
 ^ - Copy-paste query that I knew worked
 
-# Initial Vision
-
-- Typed responses
-- Impossible to write an incorrect query
-
-^ - Started with my itch
-
-^ - Wanted guardrails
-
-# Landscape of Clients
+# 2. Survey Tools
 
 - `gql` => Elm
   - No Elm 0.18 support
@@ -105,7 +99,16 @@ query {
 - GraphQL Schema => Elm API
   - My hypothesis
 
-# The Refined Vision
+# 3. Vision
+
+- Typed responses
+- Impossible to write an incorrect query
+
+^ - Started with my itch
+
+^ - Wanted guardrails
+
+# 3. Vision (Refined)
 
 - Elm gives me clear feedback
 - Elm (not `gql`) is 1st-class
@@ -126,52 +129,21 @@ query {
 - Clear, focused vision
 - It can change over time, but it should always be narrow and clearly defined
 
-# Intro to `elm-graphql`
+^ It's okay for hypothesis to be invalidated.
 
-```elm
-query {
-  human(id: "1001") {
-    name
-    homePlanet
-  }
-}
-```
-
-#### [`Run query`]((http://elm-graphql.herokuapp.com/?query=query%20%7B%0A%20%20human(id%3A%20%221001%22\)%7B%0A%20%20%20%20name%0A%20%20%20%20homePlanet%0A%20%20%7D%0A%7D%0A)
-
-# Intro to `elm-graphql`
-
-```elm
-query : SelectionSet (Maybe Human) RootQuery
-query =
-    Query.human { id = Id "1001" } humanSelection
-
-type alias Human =
-    { name : String
-    , homePlanet : Maybe String
-    }
-
-humanSelection : SelectionSet Human StarWars.Object.Human
-humanSelection =
-    SelectionSet.map2 Human
-        Human.name
-        Human.homePlanet
-```
-
-# [Day 1](https://github.com/dillonkearns/elm-graphql/blob/56495760aabc7dd4944cfaebe998271b38eaca66/tests/Tests.elm)
+# 4. Working Example [From Day 1](https://github.com/dillonkearns/elm-graphql/blob/56495760aabc7dd4944cfaebe998271b38eaca66/tests/Tests.elm)
 
 ```elm
 type alias Human =
     { name : String }
 
-
-query : Field.FieldDecoder { name : String }
+query : Field.FieldDecoder Human
 query =
     Human.human Human { id = "1000" } []
         |> Field.with Human.name
 ```
 
-# [Day 1](https://github.com/dillonkearns/elm-graphql/blob/56495760aabc7dd4944cfaebe998271b38eaca66/tests/Tests.elm)
+# 4. Working Test [From Day 1](https://github.com/dillonkearns/elm-graphql/blob/56495760aabc7dd4944cfaebe998271b38eaca66/tests/Tests.elm)
 
 ```elm
 test "generate query document" <| \_ ->
@@ -180,7 +152,9 @@ test "generate query document" <| \_ ->
       """{ human(id: "1000") { name } }"""
 ```
 
-# Day 1
+- [Commits](https://github.com/dillonkearns/elm-graphql/commits/bc12334291dc68d786da1206c4d9a8569dce8a49)
+
+# 4. Working Test [From Day 1](https://github.com/dillonkearns/elm-graphql/blob/56495760aabc7dd4944cfaebe998271b38eaca66/tests/Tests.elm)
 
 ```elm
 test "decodes properly" <| \() ->
@@ -189,16 +163,30 @@ test "decodes properly" <| \() ->
   |> Expect.equal (Ok { name = "Luke Skywalker" })
 ```
 
-# Approval Tests
+# 5. Approval Tests
 
 - AKA "Gold Master"
 - Fail if diff
 - Fix code to make it green
 - Or accept patch
 
-# Event: Hash-Based Aliases
+# Examples Versus Tests
+
+- [Introducing Phantom Types](https://github.com/dillonkearns/elm-graphql/commit/c3d1cda62adbabb7fae9fc5535c28a9052cca989#diff-2d5fe20321b71db836c3b16a8828d630)
+- Unit tests at first
+- Still meaningful from the start
+
+^ - Avoid toy examples
+
+# 6. Hash-Based Aliases
 
 - Solved a problem, but opened up possibilities
+- Based on user feedback
+- [Blog post](https://medium.com/@dillonkearns/how-elm-guides-towards-simplicity-3d34685dc33c)
+
+# 7. [Eliminate `Field`s](https://github.com/dillonkearns/elm-graphql/pull/96/files#diff-a7a8067991f96a0cd74633c0fc477539R42)
+
+- [Requesting user feedback](https://github.com/dillonkearns/elm-graphql/pull/96#issue-235218568)
 
 # Event: Exhaustive Types
 
@@ -234,3 +222,35 @@ test "decodes properly" <| \() ->
 # Idiomatic Elm Package Guide
 
 https://github.com/dillonkearns/idiomatic-elm-package-guide
+
+# Intro to `elm-graphql`
+
+```elm
+query {
+  human(id: "1001") {
+    name
+    homePlanet
+  }
+}
+```
+
+#### [`Run query`]((http://elm-graphql.herokuapp.com/?query=query%20%7B%0A%20%20human(id%3A%20%221001%22\)%7B%0A%20%20%20%20name%0A%20%20%20%20homePlanet%0A%20%20%7D%0A%7D%0A)
+
+# Intro to `elm-graphql`
+
+```elm
+query : SelectionSet (Maybe Human) RootQuery
+query =
+    Query.human { id = Id "1001" } humanSelection
+
+type alias Human =
+    { name : String
+    , homePlanet : Maybe String
+    }
+
+humanSelection : SelectionSet Human StarWars.Object.Human
+humanSelection =
+    SelectionSet.map2 Human
+        Human.name
+        Human.homePlanet
+```
