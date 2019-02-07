@@ -138,6 +138,32 @@ query {
 
 ^ It's okay for hypothesis to be invalidated.
 
+# Evaluating Feature Requests Using Vision
+
+- "Your library should do X."
+- "How does X help you achieve your outcome, Y?"
+- "What are some ways we could achieve Y that honor the principles laid out at the top of the README?"
+- Evaluate the suggested strategy
+  - I'm not a fan of that approach.
+  - I don't like that style.
+  - I think this would be the best way to do it.
+- Versus
+- Evaluate an implementation strategy's ability to achieve an outcome, while honoring the values.
+
+^ - It becomes more empathetic.
+^ - Easier to respond
+^ - Not personal
+^ - Easy to invite alternatives
+^ - Not an open invitation to do the feature however you envision it, there are common values to evaluate openly
+
+# User Feedback
+
+- Like legal concept: "Standing"
+
+^ - Might be useful to somebody, somewhere...
+
+^ - fine, talk to _that_ person, let their needs guide the design
+
 # 4. Working Example [From Day 1](https://github.com/dillonkearns/elm-graphql/blob/56495760aabc7dd4944cfaebe998271b38eaca66/tests/Tests.elm)
 
 ```elm
@@ -207,32 +233,6 @@ test "decodes properly" <| \() ->
 
 - Wouldn't be possible without query-builder approach...
 - Or at least it would be awkward. Your code would suddenly go from returning a `String` to a `Maybe String`
-
-# Evaluating Feature Requests
-
-- "Your library should do X."
-- "How does X help you achieve your outcome, Y?"
-- "What are some ways we could achieve Y that honor the principles laid out at the top of the README?"
-- Evaluate the suggested strategy
-  - I'm not a fan of that approach.
-  - I don't like that style.
-  - I think this would be the best way to do it.
-- Versus
-- Evaluate an implementation strategy's ability to achieve an outcome, while honoring the values.
-
-^ - It becomes more empathetic.
-^ - Easier to respond
-^ - Not personal
-^ - Easy to invite alternatives
-^ - Not an open invitation to do the feature however you envision it, there are common values to evaluate openly
-
-# User Feedback
-
-- Like legal concept: "Standing"
-
-^ - Might be useful to somebody, somewhere...
-
-^ - fine, talk to _that_ person, let their needs guide the design
 
 # Idiomatic Elm Package Guide
 
