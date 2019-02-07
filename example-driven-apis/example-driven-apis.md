@@ -177,8 +177,10 @@ test "decodes properly" <| \() ->
 - Fix code to make it green
 - Or accept patch
 
-# 5. [Approval Test Scripts](https://github.com/dillonkearns/elm-graphql/blob/master/bin/approve)
+# 5. [Approval Test Scripts]
 
+- [Initial script](https://github.com/dillonkearns/elm-graphql/commit/d4799c44e9c63ad2c82d0e5369be4766db8d7978) - very early
+- [Mature script](https://github.com/dillonkearns/elm-graphql/blob/master/bin/approve)
 - Demo
 
 # Examples Versus Tests
