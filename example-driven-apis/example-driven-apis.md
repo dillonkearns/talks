@@ -15,7 +15,7 @@ slide-dividers: #
 - Example-First
   - Vision => Examples => Features
 - Approval-Tests-First
-- Solve real problems (User Feedback)
+- User-Feedback-First (Solve Real Problems)
 
 ^ Vision informs examples informs features.
 
