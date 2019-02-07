@@ -1,4 +1,4 @@
-footer: bit.ly/**examplefirst**
+footer: bit.ly/**elm-ftf**
 build-lists: true
 slide-dividers: #
 
@@ -15,7 +15,7 @@ slide-dividers: #
 - Example-First
   - Vision => Examples => Features
 - Solve real problems (User Feedback)
-- End-To-End Testing => Fast & Safe Iteration
+- Approval-Tests-First
 
 ^ Vision informs examples informs features.
 
