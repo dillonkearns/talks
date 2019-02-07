@@ -26,6 +26,7 @@ slide-dividers: #
   - Clear, Focused, & Explicit
 - Example-First
 - Solve real problems (User Feedback)
+- End-To-End Testing => Fast & Safe Iteration
 
 # The Problem
 
