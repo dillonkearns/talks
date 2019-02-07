@@ -1,4 +1,4 @@
-footer: bit.ly/**typeswithoutborders**
+footer: bit.ly/**examplesfirst**
 build-lists: true
 slide-dividers: #
 
@@ -7,6 +7,22 @@ slide-dividers: #
 [.hide-footer]
 
 ![fit](img/opening.jpg)
+
+# The Timeline
+
+- How Do I GraphQL in Elm? 🤷
+- Vision
+- Working Example (No Code Gen)
+- End-To-End Tests & Code Gen
+- Public Release
+- Hash-based aliases
+- Exhaustive types
+
+# Lessons
+
+- Clear, Focused, & Explicit Vision
+- Examples-First
+- Solve real problems (User feedback)
 
 # The Problem
 
@@ -159,17 +175,21 @@ test "decodes properly" <| \() ->
   |> Expect.equal (Ok { name = "Luke Skywalker" })
 ```
 
-# Overview
+# Approval Tests
 
-- History of Elm GraphQL clients
-  _ Query generators
-  _ Untyped query builders \* Mine - first typed query builder
-- Clear vision
-- Idiomatic packages
-- User feedback
-- Stick to a simple core of features/philosophy... refer to that philosophy in issues to guide your discussion and decisions
+- AKA "Gold Master"
+- Fail if diff
+- Fix code to make it green
+- Or accept patch
 
-* API Design
+# Event: Hash-Based Aliases
+
+- Solved a problem, but opened up possibilities
+
+# Event: Exhaustive Types
+
+- Wouldn't be possible without query-builder approach...
+- Or at least it would be awkward. Your code would suddenly go from returning a `String` to a `Maybe String`
 
 # Evaluating Feature Requests
 
