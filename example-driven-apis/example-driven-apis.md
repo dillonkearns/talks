@@ -10,12 +10,12 @@ slide-dividers: #
 
 # Lessons
 
+- Problem-First (Outcome-Driven)
 - Vision-First
   - Clear, Focused, & Explicit
 - Example-First
-  - Vision => Examples => Features
 - Approval-Tests-First
-- User-Feedback-First (Solve Real Problems)
+- Problem => Vision => Examples => Tests => Features
 
 ^ Vision informs examples informs features.
 
