@@ -170,12 +170,16 @@ test "decodes properly" <| \() ->
   |> Expect.equal (Ok { name = "Luke Skywalker" })
 ```
 
-# 5. Approval Tests
+# 5. What Are Approval Tests?
 
 - AKA "Gold Master"
 - Fail if diff
 - Fix code to make it green
 - Or accept patch
+
+# 5. [Approval Test Scripts](https://github.com/dillonkearns/elm-graphql/blob/master/bin/approve)
+
+- Demo
 
 # Examples Versus Tests
 
