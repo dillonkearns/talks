@@ -17,12 +17,15 @@ slide-dividers: #
 - Public Release
 - Hash-based aliases
 - Exhaustive types
+- Polymorphic fragment is just a field
+- Eliminate `Field`s
 
 # Lessons
 
-- Clear, Focused, & Explicit Vision
+- Vision-First
+  - Clear, Focused, & Explicit
 - Examples-First
-- Solve real problems (User feedback)
+- Solve real problems (User Feedback)
 
 # The Problem
 
