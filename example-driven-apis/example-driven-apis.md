@@ -27,7 +27,7 @@ slide-dividers: #
 - Approval-Tests-First
 - Problem => Vision => Examples => Tests => Features
 
-^ Vision informs examples informs features.
+^ - Build it into process
 
 # The Timeline
 
@@ -100,10 +100,10 @@ query {
 
 # 2. Survey Tools
 
-- `gql` => Elm
-  - No Elm 0.18 support
 - Build up Json Decoders and `gql` query together
   - Manual process, error-prone
+- `gql` => Elm
+  - No Elm 0.18 support
 - GraphQL Schema => Elm API
   - My hypothesis
 
@@ -165,23 +165,29 @@ query {
 # User Feedback
 
 1. **_Feedback_** from a **_user_**
-   - "You should try this cool new restaurant!"
+   - "I like your hat!"
 2. Feedback from a user **_about your product_**
-   - "Your search results should be more purple!"
+   - "When you build this feature, make sure it's really fast!"
 3. Feedback from a user about **_about their experience_** with your product
    - I was confused searching for recent blog posts about
 
+^ - User testing
+
+^ - Talk to the person with need, let their needs guide the design
+
 # User Feedback
+
+1. **_Feedback_** from a **_user_**
+2. Feedback from a user **_about your product_**
+3. Feedback from a user about **_about their experience_** with your product
+
+- 3 => _Problem-First_ User Feedback
 
 - Like legal concept: "Standing"
 
-- You might get A
+- 2 is the norm
 
-- Ask questions to get to C
-
-^ - Might be useful to somebody, somewhere...
-
-^ - fine, talk to _that_ person, let their needs guide the design
+- Ask questions to get to 3
 
 # 4. Working Example [From Day 1](https://github.com/dillonkearns/elm-graphql/blob/56495760aabc7dd4944cfaebe998271b38eaca66/tests/Tests.elm)
 
