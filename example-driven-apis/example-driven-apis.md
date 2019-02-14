@@ -277,8 +277,6 @@ query {
 
 # 7. [Eliminate `Field`s](https://github.com/dillonkearns/elm-graphql/pull/96/files#diff-a7a8067991f96a0cd74633c0fc477539R42)
 
-- [Requesting user feedback](https://github.com/dillonkearns/elm-graphql/pull/96#issue-235218568)
-
 # -
 
 ![100%](img/fields-tweet.png)
