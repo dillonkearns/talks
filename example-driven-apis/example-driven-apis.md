@@ -278,7 +278,7 @@ query {
 
 # Lesson
 
-- Outcome-driven _user feedback_
+- Outcome-driven user feedback
 
 - Example-first
 
@@ -294,9 +294,7 @@ query {
 
 # 7. [Eliminate `Field`s](https://github.com/dillonkearns/elm-graphql/pull/96/files#diff-a7a8067991f96a0cd74633c0fc477539R42)
 
-# -
-
-![100%](img/fields-tweet.png)
+![original 100%](img/fields-tweet.png)
 
 # Event: Exhaustive Types
 
