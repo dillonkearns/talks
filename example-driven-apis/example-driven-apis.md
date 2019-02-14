@@ -279,6 +279,10 @@ query {
 
 - [Requesting user feedback](https://github.com/dillonkearns/elm-graphql/pull/96#issue-235218568)
 
+# -
+
+![100%](img/fields-tweet.png)
+
 # Event: Exhaustive Types
 
 - Wouldn't be possible without query-builder approach...
