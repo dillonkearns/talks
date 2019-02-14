@@ -114,12 +114,13 @@ query {
 - Meaningful data structures
 
 ^ - Didn't even know if it was possible
+
 ^ - Picked a clear strategy with confidence.
 
-^ - I don't want to accept auto-generated data structures as the way to structure my data. I want to choose exactly which data structures I want, and never have the intermediary data structures exist anywhere in my app (immediately map/transform them)
-
 ^ - Queries aren't the first-class citizen
+
 ^ - CODE is!
+
 ^ - Code changes, code is reused, code is refactored.
 
 # Lesson
