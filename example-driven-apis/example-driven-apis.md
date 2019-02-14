@@ -131,34 +131,44 @@ query {
 
 ^ It's okay for hypothesis to be invalidated.
 
+# -
+
+![100%](img/design-tweet.png)
+
+# -
+
+![100%](img/port-tweet.png)
+
 # 3. [Explicit Vision](https://github.com/dillonkearns/elm-graphql)
 
 - Users can evaluate whether it fits their needs
 - [Communicate with values at the core](https://github.com/dillonkearns/elm-graphql/issues/27#issuecomment-361008781)
   - Creates empathy
-  - Instead of clashing over two preferred strategies, collaborate to brainstorm how to achieve a shared goal
+  - Argue about preferred strategies vs.
+  - Collaborate to achieve shared goal
 
-# Evaluating Feature Requests Using Vision
+^ - Easy to respond
 
-- "Your library should do X."
-- "How does X help you achieve your outcome, Y?"
-- "What are some ways we could achieve Y that honor the principles laid out at the top of the README?"
-- Evaluate the suggested strategy
-  - I'm not a fan of that approach.
-  - I don't like that style.
-  - I think this would be the best way to do it.
-- Versus
-- Evaluate an implementation strategy's ability to achieve an outcome, while honoring the values.
-
-^ - It becomes more empathetic.
-^ - Easier to respond
 ^ - Not personal
-^ - Easy to invite alternatives
-^ - Not an open invitation to do the feature however you envision it, there are common values to evaluate openly
+
+^ - Invites alternatives
+
+# User Feedback
+
+1. **_Feedback_** from a **_user_**
+   - "You should try this cool new restaurant!"
+2. Feedback from a user **_about your product_**
+   - "Your search results should be more purple!"
+3. Feedback from a user about **_about their experience_** with your product
+   - I was confused searching for recent blog posts about
 
 # User Feedback
 
 - Like legal concept: "Standing"
+
+- You might get A
+
+- Ask questions to get to C
 
 ^ - Might be useful to somebody, somewhere...
 
@@ -185,7 +195,7 @@ test "generate query document" <| \_ ->
       """{ human(id: "1000") { name } }"""
 ```
 
-- [Commits](https://github.com/dillonkearns/elm-graphql/commits/bc12334291dc68d786da1206c4d9a8569dce8a49)
+[Commits](https://github.com/dillonkearns/elm-graphql/commits/bc12334291dc68d786da1206c4d9a8569dce8a49)
 
 # 4. Working Test [From Day 1](https://github.com/dillonkearns/elm-graphql/blob/56495760aabc7dd4944cfaebe998271b38eaca66/tests/Tests.elm)
 
@@ -221,9 +231,51 @@ test "decodes properly" <| \() ->
 
 # 6. Hash-Based Aliases
 
+- Started from [user feedback](https://github.com/dillonkearns/elm-graphql/issues/64)
+- First focus on solving it with existing API
 - Solved a problem, but opened up possibilities
 - Based on user feedback
 - [Blog post](https://medium.com/@dillonkearns/how-elm-guides-towards-simplicity-3d34685dc33c)
+
+^ Removed domain concept: Fields
+
+# 6. [Hash-Based Alias Solution](https://github.com/dillonkearns/elm-graphql/issues/64#issuecomment-435733851)
+
+```haskell
+query {
+  human(id: "1001") { name }
+  human1: human(id: "1004") { name }
+  human2: human(id: "1004") { id }
+}
+```
+
+Versus
+
+```haskell
+query {
+  human1213318493: human(id: "1001") { name }
+  human3685532794: human(id: "1004") { name }
+  human3685532794: human(id: "1004") { id }
+}
+```
+
+^ Less imperative
+
+# Lesson
+
+- Outcome-driven _user feedback_
+
+- Example-first
+
+  - Make one use-case awesome
+
+  - Then make another use case awesome!
+
+  - Iterate, don't solve it all at once
+
+^ - Trying to do everything, you might do everything, but it won't be awesome
+
+^ - Why? Evolution of the design, allows you to see simplifications.
 
 # 7. [Eliminate `Field`s](https://github.com/dillonkearns/elm-graphql/pull/96/files#diff-a7a8067991f96a0cd74633c0fc477539R42)
 
