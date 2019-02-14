@@ -28,8 +28,6 @@ slide-dividers: #
 1. Hash-based aliases
 1. Eliminate `Field`s
 
-^ TODO: include these topics? 1. Exhaustive types 1. Polymorphic fragment is just a field
-
 # 1. How Do I GraphQL in Elm? 🤷
 
 [Mobster download page](http://mobster.cc/)
