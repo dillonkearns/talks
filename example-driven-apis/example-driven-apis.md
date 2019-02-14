@@ -39,6 +39,19 @@ slide-dividers: #
 1. Hash-based aliases
 1. Eliminate `Field`s
 
+# What Is GraphQL?
+
+```elm
+query {
+  human(id: "1001") {
+    name
+    homePlanet
+  }
+}
+```
+
+#### [`Run query`]((http://elm-graphql.herokuapp.com/?query=query%20%7B%0A%20%20human(id%3A%20%221001%22\)%7B%0A%20%20%20%20name%0A%20%20%20%20homePlanet%0A%20%20%7D%0A%7D%0A)
+
 # 1. How Do I GraphQL in Elm? 🤷
 
 [Mobster download page](http://mobster.cc/)
@@ -304,35 +317,3 @@ query {
 # Idiomatic Elm Package Guide
 
 https://github.com/dillonkearns/idiomatic-elm-package-guide
-
-# Intro to `elm-graphql`
-
-```elm
-query {
-  human(id: "1001") {
-    name
-    homePlanet
-  }
-}
-```
-
-#### [`Run query`]((http://elm-graphql.herokuapp.com/?query=query%20%7B%0A%20%20human(id%3A%20%221001%22\)%7B%0A%20%20%20%20name%0A%20%20%20%20homePlanet%0A%20%20%7D%0A%7D%0A)
-
-# Intro to `elm-graphql`
-
-```elm
-query : SelectionSet (Maybe Human) RootQuery
-query =
-    Query.human { id = Id "1001" } humanSelection
-
-type alias Human =
-    { name : String
-    , homePlanet : Maybe String
-    }
-
-humanSelection : SelectionSet Human StarWars.Object.Human
-humanSelection =
-    SelectionSet.map2 Human
-        Human.name
-        Human.homePlanet
-```
