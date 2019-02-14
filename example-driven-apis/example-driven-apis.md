@@ -1,4 +1,3 @@
-footer: bit.ly/**elm-ftf**
 build-lists: true
 slide-dividers: #
 
@@ -123,13 +122,6 @@ query {
 ^ - CODE is!
 ^ - Code changes, code is reused, code is refactored.
 
-# 3. [Explicit Vision](https://github.com/dillonkearns/elm-graphql)
-
-- Users can evaluate whether it fits their needs
-- [Communicate with values at the core](https://github.com/dillonkearns/elm-graphql/issues/27#issuecomment-361008781)
-  - Creates empathy
-  - Instead of clashing over two preferred strategies, collaborate to brainstorm how to achieve a shared goal
-
 # Lesson
 
 - Start with a hypothesis
@@ -137,6 +129,13 @@ query {
 - It can change over time, but it should always be narrow and clearly defined
 
 ^ It's okay for hypothesis to be invalidated.
+
+# 3. [Explicit Vision](https://github.com/dillonkearns/elm-graphql)
+
+- Users can evaluate whether it fits their needs
+- [Communicate with values at the core](https://github.com/dillonkearns/elm-graphql/issues/27#issuecomment-361008781)
+  - Creates empathy
+  - Instead of clashing over two preferred strategies, collaborate to brainstorm how to achieve a shared goal
 
 # Evaluating Feature Requests Using Vision
 
