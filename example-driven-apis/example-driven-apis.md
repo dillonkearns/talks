@@ -316,4 +316,10 @@ query {
 
 # Idiomatic Elm Package Guide
 
-https://github.com/dillonkearns/idiomatic-elm-package-guide
+[github.com/dillonkearns/idiomatic-elm-package-guide](https://github.com/dillonkearns/idiomatic-elm-package-guide)
+
+# -
+
+[.hide-footer]
+
+![fit](img/thank-you.jpg)
