@@ -7,11 +7,22 @@ slide-dividers: #
 
 ![fit](img/opening.jpg)
 
+# Order Matters
+
+- Unit Testing
+- Test-Driven Development (Test-First)
+  - Decouples design
+  - No false positives
+  - Everything is covered by a test
+  - Iterate with the help of tests
+  - Code quality improves
+
+^ - Fundamental difference from afterthought
+
 # Lessons
 
 - Problem-First (Outcome-Driven)
 - Vision-First
-  - Clear, Focused, & Explicit
 - Example-First
 - Approval-Tests-First
 - Problem => Vision => Examples => Tests => Features
