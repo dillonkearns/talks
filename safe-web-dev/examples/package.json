@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "elm-live": "^2.7.5"
+    "elm-live": "^4.0.2"
   },
   "devDependencies": {},
   "scripts": {
